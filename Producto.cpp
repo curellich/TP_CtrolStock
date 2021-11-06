@@ -123,7 +123,7 @@ void Producto::leerDesdeUnArchivoBinario(std::ifstream &archivo) {
 
 /**
  * Devuelve true si el codigo del producto1 es menor que el codigo del producto 2.
- * Se usa como argumento para la funcion sort para ordenar una lista.
+ * Se usa como argumento para la funcion sort para ordenar una listaProductos.
  */
 bool criterio_comparacion_codigo(const Producto &producto1, const Producto &producto2) {
     int codigo1 = producto1.getCodigo();
@@ -133,7 +133,7 @@ bool criterio_comparacion_codigo(const Producto &producto1, const Producto &prod
 
 /**
  * Devuelve true si la descripcion del producto1 es menor que la descripcion del producto 2.
- * Se usa como argumento para la funcion sort para ordenar una lista.
+ * Se usa como argumento para la funcion sort para ordenar una listaProductos.
  */
 bool criterio_comparacion_descripcion(const Producto &producto1, const Producto &producto2) {
     std::string descripcion1 = producto1.getDescripcion();
@@ -147,7 +147,7 @@ bool criterio_comparacion_descripcion(const Producto &producto1, const Producto 
 
 /**
  * Devuelve true si las existencias del producto1 es menor que las existencias del producto 2.
- * Se usa como argumento para la funcion sort para ordenar una lista.
+ * Se usa como argumento para la funcion sort para ordenar una listaProductos.
  */
 bool criterio_comparacion_existencia(const Producto &producto1, const Producto &producto2) {
     int existencias1 = producto1.getExistencias();
@@ -158,7 +158,7 @@ bool criterio_comparacion_existencia(const Producto &producto1, const Producto &
 
 /**
  * Devuelve true si el precio del producto1 es menor que el precio del producto 2.
- * Se usa como argumento para la funcion sort para ordenar una lista.
+ * Se usa como argumento para la funcion sort para ordenar una listaProductos.
  */
 bool criterio_comparacion_precio(const Producto &producto1, const Producto &producto2) {
     double precio1 = producto1.getPrecio();
