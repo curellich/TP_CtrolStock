@@ -3,4 +3,4 @@ project(000_TP_CtrolStock)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(000_TP_CtrolStock main.cpp)
+add_executable(000_TP_CtrolStock main.cpp Producto.cpp Producto.h Utileria.cpp Utileria.h Deposito.cpp Deposito.h)
