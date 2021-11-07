@@ -218,6 +218,9 @@ CMakeFiles/OtraPrueba.dir/Utileria.cpp.o: \
  ../Utileria.cpp \
  ../Utileria.h
 CMakeFiles/OtraPrueba.dir/WinAlta.cpp.o: \
+ ../Deposito.h \
+ ../Producto.h \
+ ../Utileria.h \
  ../WinAlta.cpp \
  ../WinAlta.h \
  ../wxfb_project.h \
@@ -277,6 +280,7 @@ CMakeFiles/OtraPrueba.dir/WinAlta.cpp.o: \
  /usr/local/include/wx-3.1/wx/generic/icon.h \
  /usr/local/include/wx-3.1/wx/generic/imaglist.h \
  /usr/local/include/wx-3.1/wx/generic/logg.h \
+ /usr/local/include/wx-3.1/wx/generic/msgdlgg.h \
  /usr/local/include/wx-3.1/wx/generic/panelg.h \
  /usr/local/include/wx-3.1/wx/generic/region.h \
  /usr/local/include/wx-3.1/wx/generic/scrolwin.h \
@@ -318,6 +322,7 @@ CMakeFiles/OtraPrueba.dir/WinAlta.cpp.o: \
  /usr/local/include/wx-3.1/wx/meta/pod.h \
  /usr/local/include/wx-3.1/wx/meta/removeref.h \
  /usr/local/include/wx-3.1/wx/mousestate.h \
+ /usr/local/include/wx-3.1/wx/msgdlg.h \
  /usr/local/include/wx-3.1/wx/msgout.h \
  /usr/local/include/wx-3.1/wx/nonownedwnd.h \
  /usr/local/include/wx-3.1/wx/object.h \
@@ -338,6 +343,7 @@ CMakeFiles/OtraPrueba.dir/WinAlta.cpp.o: \
  /usr/local/include/wx-3.1/wx/osx/dialog.h \
  /usr/local/include/wx-3.1/wx/osx/font.h \
  /usr/local/include/wx-3.1/wx/osx/frame.h \
+ /usr/local/include/wx-3.1/wx/osx/msgdlg.h \
  /usr/local/include/wx-3.1/wx/osx/nonownedwnd.h \
  /usr/local/include/wx-3.1/wx/osx/palette.h \
  /usr/local/include/wx-3.1/wx/osx/pen.h \
@@ -368,6 +374,7 @@ CMakeFiles/OtraPrueba.dir/WinAlta.cpp.o: \
  /usr/local/include/wx-3.1/wx/sizer.h \
  /usr/local/include/wx-3.1/wx/stattext.h \
  /usr/local/include/wx-3.1/wx/statusbr.h \
+ /usr/local/include/wx-3.1/wx/stockitem.h \
  /usr/local/include/wx-3.1/wx/strconv.h \
  /usr/local/include/wx-3.1/wx/stream.h \
  /usr/local/include/wx-3.1/wx/string.h \
@@ -797,6 +804,9 @@ CMakeFiles/OtraPrueba.dir/WinListar.cpp.o: \
  /usr/local/include/wx-3.1/wx/xtitypes.h \
  /usr/local/lib/wx/include/osx_cocoa-unicode-3.1/wx/setup.h
 CMakeFiles/OtraPrueba.dir/WinModificar.cpp.o: \
+ ../Deposito.h \
+ ../Producto.h \
+ ../Utileria.h \
  ../WinModificar.cpp \
  ../WinModificar.h \
  ../wxfb_project.h \
@@ -856,6 +866,7 @@ CMakeFiles/OtraPrueba.dir/WinModificar.cpp.o: \
  /usr/local/include/wx-3.1/wx/generic/icon.h \
  /usr/local/include/wx-3.1/wx/generic/imaglist.h \
  /usr/local/include/wx-3.1/wx/generic/logg.h \
+ /usr/local/include/wx-3.1/wx/generic/msgdlgg.h \
  /usr/local/include/wx-3.1/wx/generic/panelg.h \
  /usr/local/include/wx-3.1/wx/generic/region.h \
  /usr/local/include/wx-3.1/wx/generic/scrolwin.h \
@@ -897,6 +908,7 @@ CMakeFiles/OtraPrueba.dir/WinModificar.cpp.o: \
  /usr/local/include/wx-3.1/wx/meta/pod.h \
  /usr/local/include/wx-3.1/wx/meta/removeref.h \
  /usr/local/include/wx-3.1/wx/mousestate.h \
+ /usr/local/include/wx-3.1/wx/msgdlg.h \
  /usr/local/include/wx-3.1/wx/msgout.h \
  /usr/local/include/wx-3.1/wx/nonownedwnd.h \
  /usr/local/include/wx-3.1/wx/object.h \
@@ -917,6 +929,7 @@ CMakeFiles/OtraPrueba.dir/WinModificar.cpp.o: \
  /usr/local/include/wx-3.1/wx/osx/dialog.h \
  /usr/local/include/wx-3.1/wx/osx/font.h \
  /usr/local/include/wx-3.1/wx/osx/frame.h \
+ /usr/local/include/wx-3.1/wx/osx/msgdlg.h \
  /usr/local/include/wx-3.1/wx/osx/nonownedwnd.h \
  /usr/local/include/wx-3.1/wx/osx/palette.h \
  /usr/local/include/wx-3.1/wx/osx/pen.h \
@@ -947,6 +960,7 @@ CMakeFiles/OtraPrueba.dir/WinModificar.cpp.o: \
  /usr/local/include/wx-3.1/wx/sizer.h \
  /usr/local/include/wx-3.1/wx/stattext.h \
  /usr/local/include/wx-3.1/wx/statusbr.h \
+ /usr/local/include/wx-3.1/wx/stockitem.h \
  /usr/local/include/wx-3.1/wx/strconv.h \
  /usr/local/include/wx-3.1/wx/stream.h \
  /usr/local/include/wx-3.1/wx/string.h \
@@ -993,6 +1007,8 @@ CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.o: \
  ../Deposito.h \
  ../Producto.h \
  ../Utileria.h \
+ ../WinAlta.h \
+ ../WinModificar.h \
  ../WinPrincipal.cpp \
  ../WinPrincipal.h \
  ../wxfb_project.h \
@@ -1052,6 +1068,7 @@ CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.o: \
  /usr/local/include/wx-3.1/wx/generic/icon.h \
  /usr/local/include/wx-3.1/wx/generic/imaglist.h \
  /usr/local/include/wx-3.1/wx/generic/logg.h \
+ /usr/local/include/wx-3.1/wx/generic/msgdlgg.h \
  /usr/local/include/wx-3.1/wx/generic/panelg.h \
  /usr/local/include/wx-3.1/wx/generic/region.h \
  /usr/local/include/wx-3.1/wx/generic/scrolwin.h \
@@ -1093,6 +1110,7 @@ CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.o: \
  /usr/local/include/wx-3.1/wx/meta/pod.h \
  /usr/local/include/wx-3.1/wx/meta/removeref.h \
  /usr/local/include/wx-3.1/wx/mousestate.h \
+ /usr/local/include/wx-3.1/wx/msgdlg.h \
  /usr/local/include/wx-3.1/wx/msgout.h \
  /usr/local/include/wx-3.1/wx/nonownedwnd.h \
  /usr/local/include/wx-3.1/wx/object.h \
@@ -1113,6 +1131,7 @@ CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.o: \
  /usr/local/include/wx-3.1/wx/osx/dialog.h \
  /usr/local/include/wx-3.1/wx/osx/font.h \
  /usr/local/include/wx-3.1/wx/osx/frame.h \
+ /usr/local/include/wx-3.1/wx/osx/msgdlg.h \
  /usr/local/include/wx-3.1/wx/osx/nonownedwnd.h \
  /usr/local/include/wx-3.1/wx/osx/palette.h \
  /usr/local/include/wx-3.1/wx/osx/pen.h \
@@ -1143,6 +1162,7 @@ CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.o: \
  /usr/local/include/wx-3.1/wx/sizer.h \
  /usr/local/include/wx-3.1/wx/stattext.h \
  /usr/local/include/wx-3.1/wx/statusbr.h \
+ /usr/local/include/wx-3.1/wx/stockitem.h \
  /usr/local/include/wx-3.1/wx/strconv.h \
  /usr/local/include/wx-3.1/wx/stream.h \
  /usr/local/include/wx-3.1/wx/string.h \

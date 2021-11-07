@@ -1,4 +1,16 @@
 /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock"
 -- Configuring done
--- Generating done
--- Build files have been written to: /Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug
+CMake Error at CMakeLists.txt:65 (add_executable):
+  Cannot find source file:
+
+    WinProducto.h
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .h .hh .h++
+  .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .ispc
+
+
+CMake Error at CMakeLists.txt:65 (add_executable):
+  No SOURCES given to target: OtraPrueba
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
