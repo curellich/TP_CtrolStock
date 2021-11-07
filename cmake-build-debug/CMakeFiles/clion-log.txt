@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug

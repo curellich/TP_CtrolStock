@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Deposito.h
+vector
+-
+string
+-
+Producto.h
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Producto.h
+
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Producto.h
+string
+-
+fstream
+-
+Utileria.h
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Utileria.h
+
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Utileria.h
+string
+-
+
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/main.cpp
+iostream
+-
+iomanip
+-
+Deposito.h
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Deposito.h
+string
+-
+

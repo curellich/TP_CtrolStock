@@ -1,0 +1,3 @@
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles/OtraPrueba.dir

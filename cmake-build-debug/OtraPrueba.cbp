@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="OtraPrueba"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OtraPrueba">
+				<Option output="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/OtraPrueba" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXMAC__"/>
+					<Add option="-D__WXOSX__"/>
+					<Add option="-D__WXOSX_COCOA__"/>
+					<Add directory="/usr/local/lib/wx/include/osx_cocoa-unicode-3.1"/>
+					<Add directory="/usr/local/include/wx-3.1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 OtraPrueba"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="OtraPrueba/fast">
+				<Option output="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/OtraPrueba" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXMAC__"/>
+					<Add option="-D__WXOSX__"/>
+					<Add option="-D__WXOSX_COCOA__"/>
+					<Add directory="/usr/local/lib/wx/include/osx_cocoa-unicode-3.1"/>
+					<Add directory="/usr/local/include/wx-3.1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 OtraPrueba/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j8 -f &quot;/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas\ III/000-TP\ Final/000-TP_CtrolStock/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Application.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Application.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Deposito.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Deposito.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Producto.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Producto.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Utileria.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Utileria.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinAlta.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinAlta.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinCompra.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinCompra.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinListar.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinListar.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinModificar.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinModificar.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinPrincipal.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinPrincipal.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinVenta.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinVenta.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/wxfb_project.cpp">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/wxfb_project.h">
+			<Option target="OtraPrueba"/>
+		</Unit>
+		<Unit filename="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
