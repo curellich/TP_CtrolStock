@@ -20,7 +20,7 @@
 enum criterioOrdenamiento {
     CODIGO,
     DESCRIPCION,
-    CANTIDAD,
+    EXISTENCIAS,
     PRECIO
 };
 

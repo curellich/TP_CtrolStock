@@ -22,11 +22,11 @@ WinPrincipal::WinPrincipal(Deposito *miDeposito) : WxfbPrincipal(nullptr),
 }
 
 /**
-* Toma los datos de una persona desde la instancia de Agenda y los carga en su
-* correspondiente fila de la m_grilla. Se usa al cargar por primera vez, al editar,
-* o al agregar personas. La m_grilla ya debe tener lugar, es decir, debe existir el
-* renglon (estara vacio o tendra basura).
-* @param i el indice de la persona en el arreglo de la clase Agenda (en base 0)
+* Toma los datos de un producto desde la instancia de Deposito y los carga en su
+* correspondiente fila de la m_tabla. Se usa al cargar por primera vez, al editar,
+* o al agregar productos. La m_tabla ya debe tener lugar, es decir, debe existir la
+* fila (estara vacio o tendra basura).
+* @param i el indice de del producto en el vector de la clase Deposito
 **/
 void WinPrincipal::cargarFila(int i) {
     Producto &producto = (*miDeposito)[i];
@@ -38,13 +38,57 @@ void WinPrincipal::cargarFila(int i) {
     m_tabla->SetCellValue(i, 5, wxString() << producto.getPrecio());
 }
 
-
+/**
+ * Cuando se hace click en buscar, se busca desde el producto que esta seleccionada en la tabla, si desde la posicion
+ * seleccionada hacia adelante hay alguna coincidencia, se posiciona sobre la fila, si hay mas de una coincidencia,
+ * cada vez que apretamos buscar se posiciona en la proxima conincidencia.
+ * Si no hay coincidencia indica que no se encontro el producto.
+ */
 void WinPrincipal::OnClickBuscar(wxCommandEvent &event) {
-    event.Skip();
+    //Buscar desde la fila filaSeleccionada
+    int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
+    if (m_tabla->GetSelectedRows().GetCount() == 0) {
+        filaSeleccionada = -1;
+    }
+    int respuesta = miDeposito->buscarPorDescripcion((std::string) (m_busqueda->GetValue()), filaSeleccionada + 1);
+    //Si no lo encontro buscar nuevamente desde el principio
+    if (respuesta == NO_ENCONTRADO) {
+        respuesta = miDeposito->buscarPorDescripcion((std::string) m_busqueda->GetValue(), 0);
+    }
+    if (respuesta == NO_ENCONTRADO) {
+        wxMessageBox("No se encontró el producto");
+    } else {
+        m_tabla->SetGridCursor(respuesta, 0);//Posiciono el cursor en la fila donde se encontró el producto
+        m_tabla->SelectRow(respuesta);//Selecciono la fila completa donde se encontró el producto
+    }
 }
 
+/**
+ * Si se hace click en el encabezado de algun campo de la tabla, la tabla se ordena segun ese dato.
+ * Para esto se ordena el vector, se almacena en el archvio y por ultimo se vuelve a cargar los datos
+ * en todas las filas
+ */
 void WinPrincipal::OnClickTabla(wxGridEvent &event) {
-    event.Skip();
+    int columna = event.GetCol();
+    int cantidadProductos = miDeposito->cantidadProductos();
+    //ordeno el deposito
+    switch (columna) {
+        case 0:
+            miDeposito->ordenar(CODIGO);
+            break;
+        case 1:
+            miDeposito->ordenar(DESCRIPCION);
+            break;
+        case 2:
+            miDeposito->ordenar(EXISTENCIAS);
+            break;
+        case 3:
+            miDeposito->ordenar(PRECIO);
+            break;
+    }
+    for (int i = 0; i < cantidadProductos; ++i) {
+        cargarFila(i); //actualizo la vista de la tabla
+    }
 }
 
 /**

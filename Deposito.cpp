@@ -70,7 +70,7 @@ void Deposito::ordenar(criterioOrdenamiento criterio) {
         case DESCRIPCION:
             sort(listaProductos.begin(), listaProductos.end(), criterio_comparacion_descripcion);
             break;
-        case CANTIDAD:
+        case EXISTENCIAS:
             sort(listaProductos.begin(), listaProductos.end(), criterio_comparacion_existencia);
             break;
         case PRECIO:
