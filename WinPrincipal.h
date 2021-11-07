@@ -15,6 +15,12 @@ private:
 
 protected:
     //eventos
+    ///Busca la descripcion del producto cuando presionamos enter, equivale a hacer click en "Buscar"
+    void EnterBuscar(wxCommandEvent &event) override;
+
+    ///Redimensiona los tamanios de las columnas de la tabla cuando cambia el tamanio de la ventana principal
+    void OnCambiaTamanio(wxSizeEvent &event) override;
+
     ///Busca la descripcion del producto cuando hacemos click en el boton "Buscar"
     void OnClickBuscar(wxCommandEvent &event) override;
 

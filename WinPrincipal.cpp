@@ -149,17 +149,49 @@ void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
 void WinPrincipal::OnClickListados(wxCommandEvent &event) {
     event.Skip();
 }
+
 /**
  * El doble click en una fila de la table es lo mismo que hacer click en modificar
  */
 void WinPrincipal::OnDobleClickTabla(wxGridEvent &event) {
     int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
-    WinModificar nuevaVentana(this,miDeposito,filaSeleccionada); //Creamos la ventana
-    if(nuevaVentana.ShowModal()){ //mostrar y dejar en espera
+    WinModificar nuevaVentana(this, miDeposito, filaSeleccionada); //Creamos la ventana
+    if (nuevaVentana.ShowModal()) { //mostrar y dejar en espera
         cargarFila(filaSeleccionada); //Actualizamos en la m_tabla
     }
 
 }
+
+/**
+ * El enter en el cuadro de texto equivale a hacer click en el boton "Buscar"
+ */
+void WinPrincipal::EnterBuscar(wxCommandEvent &event) {
+    OnClickBuscar(event);
+}
+
+/**
+ * Las columnas de la tabla no se ajustan solas cuando se redimensiona la ventana.
+ * Este metodo calcula los nuevos tamanios proporcionalmente a los viejas valores
+ * para que ocupen el espacio posible
+ * @param event
+ */
+void WinPrincipal::OnCambiaTamanio(wxSizeEvent &event) {
+    Layout();//Primero que ajuste la ventana, asi tengo el nuevo tamanio de la m_tabla
+    int tamanios[6];
+    int anchoTotalViejo = 0;
+    for (int i = 0; i < 6; ++i) {
+        tamanios[i] = m_tabla->GetColSize(i);
+        anchoTotalViejo += tamanios[i];
+    }
+    int anchoTotalNuevo = m_tabla->GetSize().GetWidth(); //obtengo el ancho nuevo de la tabla
+    m_tabla->BeginBatch(); //Permite que cuando cambiamos varias cosas, solo redibuje al final
+    for (int i = 0; i < 6; ++i) {
+        m_tabla->SetColSize(i,tamanios[i]*anchoTotalNuevo/anchoTotalViejo);
+    }
+    m_tabla->EndBatch();
+
+}
+
 
 
 

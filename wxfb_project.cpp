@@ -110,8 +110,10 @@ WxfbPrincipal::WxfbPrincipal(wxWindow *parent, wxWindowID id, const wxString &ti
     this->Centre(wxBOTH);
 
     // Connect Events
+    this->Connect(wxEVT_SIZE, wxSizeEventHandler(WxfbPrincipal::OnCambiaTamanio));
     m_btn_buscar->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(WxfbPrincipal::OnClickBuscar), NULL,
                           this);
+    m_busqueda->Connect(wxEVT_COMMAND_TEXT_ENTER, wxCommandEventHandler(WxfbPrincipal::EnterBuscar), NULL, this);
     m_tabla->Connect(wxEVT_GRID_CELL_LEFT_DCLICK, wxGridEventHandler(WxfbPrincipal::OnDobleClickTabla), NULL, this);
     m_tabla->Connect(wxEVT_GRID_LABEL_LEFT_CLICK, wxGridEventHandler(WxfbPrincipal::OnClickTabla), NULL, this);
     m_btn_alta->Connect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(WxfbPrincipal::OnClickAlta), NULL, this);
@@ -127,8 +129,10 @@ WxfbPrincipal::WxfbPrincipal(wxWindow *parent, wxWindowID id, const wxString &ti
 
 WxfbPrincipal::~WxfbPrincipal() {
     // Disconnect Events
+    this->Disconnect(wxEVT_SIZE, wxSizeEventHandler(WxfbPrincipal::OnCambiaTamanio));
     m_btn_buscar->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(WxfbPrincipal::OnClickBuscar), NULL,
                              this);
+    m_busqueda->Disconnect(wxEVT_COMMAND_TEXT_ENTER, wxCommandEventHandler(WxfbPrincipal::EnterBuscar), NULL, this);
     m_tabla->Disconnect(wxEVT_GRID_CELL_LEFT_DCLICK, wxGridEventHandler(WxfbPrincipal::OnDobleClickTabla), NULL, this);
     m_tabla->Disconnect(wxEVT_GRID_LABEL_LEFT_CLICK, wxGridEventHandler(WxfbPrincipal::OnClickTabla), NULL, this);
     m_btn_alta->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler(WxfbPrincipal::OnClickAlta), NULL, this);

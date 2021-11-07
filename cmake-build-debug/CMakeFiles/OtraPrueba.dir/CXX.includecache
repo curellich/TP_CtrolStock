@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Application.cpp
-wx/image.h
--
-Application.h
-/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Application.h
-WinPrincipal.h
-/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/WinPrincipal.h
-
-/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Application.h
-wx/app.h
--
-Deposito.h
-/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Deposito.h
-
 /Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/Deposito.h
 vector
 -
@@ -190,42 +176,6 @@ wx/qt/anybutton.h
 wx/string.h
 /usr/local/include/wx-3.1/wx/wx/string.h
 
-/usr/local/include/wx-3.1/wx/app.h
-wx/event.h
-/usr/local/include/wx-3.1/wx/wx/event.h
-wx/eventfilter.h
-/usr/local/include/wx-3.1/wx/wx/eventfilter.h
-wx/build.h
-/usr/local/include/wx-3.1/wx/wx/build.h
-wx/cmdargs.h
-/usr/local/include/wx-3.1/wx/wx/cmdargs.h
-wx/init.h
-/usr/local/include/wx-3.1/wx/wx/init.h
-wx/intl.h
-/usr/local/include/wx-3.1/wx/wx/intl.h
-wx/log.h
-/usr/local/include/wx-3.1/wx/wx/log.h
-wx/unix/app.h
-/usr/local/include/wx-3.1/wx/wx/unix/app.h
-wx/msw/app.h
-/usr/local/include/wx-3.1/wx/wx/msw/app.h
-wx/motif/app.h
-/usr/local/include/wx-3.1/wx/wx/motif/app.h
-wx/dfb/app.h
-/usr/local/include/wx-3.1/wx/wx/dfb/app.h
-wx/gtk/app.h
-/usr/local/include/wx-3.1/wx/wx/gtk/app.h
-wx/gtk1/app.h
-/usr/local/include/wx-3.1/wx/wx/gtk1/app.h
-wx/x11/app.h
-/usr/local/include/wx-3.1/wx/wx/x11/app.h
-wx/osx/app.h
-/usr/local/include/wx-3.1/wx/wx/osx/app.h
-wx/qt/app.h
-/usr/local/include/wx-3.1/wx/wx/qt/app.h
-wx/univ/theme.h
-/usr/local/include/wx-3.1/wx/wx/univ/theme.h
-
 /usr/local/include/wx-3.1/wx/arrstr.h
 wx/defs.h
 /usr/local/include/wx-3.1/wx/wx/defs.h
@@ -328,10 +278,6 @@ wx/wxcrtbase.h
 stdlib.h
 -
 
-/usr/local/include/wx-3.1/wx/build.h
-wx/version.h
-/usr/local/include/wx-3.1/wx/wx/version.h
-
 /usr/local/include/wx-3.1/wx/button.h
 wx/defs.h
 /usr/local/include/wx-3.1/wx/wx/defs.h
@@ -429,10 +375,6 @@ wx/string.h
 /usr/local/include/wx-3.1/wx/wx/string.h
 wx/hashmap.h
 /usr/local/include/wx-3.1/wx/wx/hashmap.h
-
-/usr/local/include/wx-3.1/wx/cmdargs.h
-wx/arrstr.h
-/usr/local/include/wx-3.1/wx/wx/arrstr.h
 
 /usr/local/include/wx-3.1/wx/colour.h
 wx/defs.h
@@ -673,10 +615,6 @@ wx/meta/convertible.h
 /usr/local/include/wx-3.1/wx/wx/meta/convertible.h
 wx/meta/removeref.h
 /usr/local/include/wx-3.1/wx/wx/meta/removeref.h
-
-/usr/local/include/wx-3.1/wx/eventfilter.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
 
 /usr/local/include/wx-3.1/wx/except.h
 wx/defs.h
@@ -1064,14 +1002,6 @@ wx/versioninfo.h
 wx/image.h
 /usr/local/include/wx-3.1/wx/wx/image.h
 
-/usr/local/include/wx-3.1/wx/init.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/wx/defs.h
-wx/chartype.h
-/usr/local/include/wx-3.1/wx/wx/chartype.h
-wx/msw/init.h
-/usr/local/include/wx-3.1/wx/wx/msw/init.h
-
 /usr/local/include/wx-3.1/wx/intl.h
 wx/defs.h
 /usr/local/include/wx-3.1/wx/wx/defs.h
@@ -1287,16 +1217,6 @@ wx/event.h
 /usr/local/include/wx-3.1/wx/osx/wx/event.h
 
 /usr/local/include/wx-3.1/wx/osx/anybutton.h
-
-/usr/local/include/wx-3.1/wx/osx/app.h
-wx/defs.h
-/usr/local/include/wx-3.1/wx/osx/wx/defs.h
-wx/object.h
-/usr/local/include/wx-3.1/wx/osx/wx/object.h
-wx/gdicmn.h
-/usr/local/include/wx-3.1/wx/osx/wx/gdicmn.h
-wx/event.h
-/usr/local/include/wx-3.1/wx/osx/wx/event.h
 
 /usr/local/include/wx-3.1/wx/osx/bitmap.h
 wx/palette.h
@@ -1932,10 +1852,6 @@ wx/stringimpl.h
 algorithm
 -
 utility
--
-
-/usr/local/include/wx-3.1/wx/unix/app.h
-signal.h
 -
 
 /usr/local/include/wx-3.1/wx/unix/chkconf.h
