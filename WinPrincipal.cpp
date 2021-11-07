@@ -82,7 +82,7 @@ void WinPrincipal::OnClickTabla(wxGridEvent &event) {
         case 2:
             miDeposito->ordenar(EXISTENCIAS);
             break;
-        case 3:
+        case 5:
             miDeposito->ordenar(PRECIO);
             break;
     }
