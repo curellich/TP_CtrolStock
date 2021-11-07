@@ -149,6 +149,17 @@ void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
 void WinPrincipal::OnClickListados(wxCommandEvent &event) {
     event.Skip();
 }
+/**
+ * El doble click en una fila de la table es lo mismo que hacer click en modificar
+ */
+void WinPrincipal::OnDobleClickTabla(wxGridEvent &event) {
+    int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
+    WinModificar nuevaVentana(this,miDeposito,filaSeleccionada); //Creamos la ventana
+    if(nuevaVentana.ShowModal()){ //mostrar y dejar en espera
+        cargarFila(filaSeleccionada); //Actualizamos en la m_tabla
+    }
+
+}
 
 
 

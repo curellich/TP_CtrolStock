@@ -32,128 +32,146 @@
 ///////////////////////////////////////////////////////////////////////////////
 /// Class WxfbPrincipal
 ///////////////////////////////////////////////////////////////////////////////
-class WxfbPrincipal : public wxFrame
-{
-	private:
+class WxfbPrincipal : public wxFrame {
+private:
 
-	protected:
-		wxStaticText* m_staticText2;
-		wxTextCtrl* m_busqueda;
-		wxButton* m_btn_buscar;
-		wxGrid* m_tabla;
-		wxStaticText* m_staticText3;
-		wxButton* m_btn_alta;
-		wxButton* m_btn_editar;
-		wxButton* m_btn_baja;
-		wxStaticText* m_staticText4;
-		wxButton* m_btn_compra;
-		wxButton* m_btn_venta;
-		wxButton* m_btn_listados;
+protected:
+    wxStaticText *m_staticText2;
+    wxTextCtrl *m_busqueda;
+    wxButton *m_btn_buscar;
+    wxGrid *m_tabla;
+    wxStaticText *m_staticText3;
+    wxButton *m_btn_alta;
+    wxButton *m_btn_editar;
+    wxButton *m_btn_baja;
+    wxStaticText *m_staticText4;
+    wxButton *m_btn_compra;
+    wxButton *m_btn_venta;
+    wxButton *m_btn_listados;
 
-		// Virtual event handlers, override them in your derived class
-		virtual void OnClickBuscar( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickTabla( wxGridEvent& event ) { event.Skip(); }
-		virtual void OnClickAlta( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickEditar( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickBaja( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickCompra( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickVenta( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickListados( wxCommandEvent& event ) { event.Skip(); }
+    // Virtual event handlers, override them in your derived class
+    virtual void OnCambiaTamanio(wxSizeEvent &event) { event.Skip(); }
+
+    virtual void EnterBuscar(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickBuscar(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickTabla(wxGridEvent &event) { event.Skip(); }
+
+    virtual void OnDobleClickTabla(wxGridEvent &event) { event.Skip(); }
+
+    virtual void OnClickAlta(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickEditar(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickBaja(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickCompra(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickVenta(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickListados(wxCommandEvent &event) { event.Skip(); }
 
 
-	public:
+public:
 
-		WxfbPrincipal( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Deposito"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize( 750,500 ), long style = wxDEFAULT_FRAME_STYLE|wxTAB_TRAVERSAL );
+    WxfbPrincipal(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Deposito"),
+                  const wxPoint &pos = wxDefaultPosition, const wxSize &size = wxSize(750, 500),
+                  long style = wxDEFAULT_FRAME_STYLE | wxTAB_TRAVERSAL);
 
-		~WxfbPrincipal();
+    ~WxfbPrincipal();
 
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class WxfbProducto
 ///////////////////////////////////////////////////////////////////////////////
-class WxfbProducto : public wxDialog
-{
-	private:
+class WxfbProducto : public wxDialog {
+private:
 
-	protected:
-		wxStaticText* m_staticText4;
-		wxTextCtrl* m_codigo;
-		wxStaticText* m_staticText5;
-		wxTextCtrl* m_descripcion;
-		wxStaticText* m_staticText6;
-		wxTextCtrl* m_existencias;
-		wxStaticText* m_staticText7;
-		wxTextCtrl* m_stockMin;
-		wxStaticText* m_staticText8;
-		wxTextCtrl* m_stockMax;
-		wxStaticText* m_staticText9;
-		wxTextCtrl* m_precio;
-		wxButton* m_btn_cancelar_producto;
-		wxButton* m_btn_alta_producto;
+protected:
+    wxStaticText *m_staticText4;
+    wxTextCtrl *m_codigo;
+    wxStaticText *m_staticText5;
+    wxTextCtrl *m_descripcion;
+    wxStaticText *m_staticText6;
+    wxTextCtrl *m_existencias;
+    wxStaticText *m_staticText7;
+    wxTextCtrl *m_stockMin;
+    wxStaticText *m_staticText8;
+    wxTextCtrl *m_stockMax;
+    wxStaticText *m_staticText9;
+    wxTextCtrl *m_precio;
+    wxButton *m_btn_cancelar_producto;
+    wxButton *m_btn_alta_producto;
 
-		// Virtual event handlers, override them in your derived class
-		virtual void OnClickCancelarProducto( wxCommandEvent& event ) { event.Skip(); }
-		virtual void OnClickAltaoEditarProducto( wxCommandEvent& event ) { event.Skip(); }
+    // Virtual event handlers, override them in your derived class
+    virtual void OnClickCancelarProducto(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickAltaoEditarProducto(wxCommandEvent &event) { event.Skip(); }
 
 
-	public:
+public:
 
-		WxfbProducto( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Producto"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+    WxfbProducto(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Producto"),
+                 const wxPoint &pos = wxDefaultPosition, const wxSize &size = wxDefaultSize,
+                 long style = wxDEFAULT_DIALOG_STYLE);
 
-		~WxfbProducto();
+    ~WxfbProducto();
 
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class WxOperaciones
 ///////////////////////////////////////////////////////////////////////////////
-class WxOperaciones : public wxDialog
-{
-	private:
+class WxOperaciones : public wxDialog {
+private:
 
-	protected:
-		wxStaticText* m_staticText10;
-		wxTextCtrl* m_codigo_operaciones;
-		wxStaticText* m_staticText11;
-		wxTextCtrl* m_descripcion_operaciones;
-		wxStaticText* m_staticText12;
-		wxTextCtrl* m_cantidad_operaciones;
-		wxButton* m_btn_cancelar_compra_venta;
-		wxButton* m_btn_confirmar_compra_venta;
+protected:
+    wxStaticText *m_staticText10;
+    wxTextCtrl *m_codigo_operaciones;
+    wxStaticText *m_staticText11;
+    wxTextCtrl *m_descripcion_operaciones;
+    wxStaticText *m_staticText12;
+    wxTextCtrl *m_cantidad_operaciones;
+    wxButton *m_btn_cancelar_compra_venta;
+    wxButton *m_btn_confirmar_compra_venta;
 
-	public:
+public:
 
-		WxOperaciones( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Operaciones"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+    WxOperaciones(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Operaciones"),
+                  const wxPoint &pos = wxDefaultPosition, const wxSize &size = wxDefaultSize,
+                  long style = wxDEFAULT_DIALOG_STYLE);
 
-		~WxOperaciones();
+    ~WxOperaciones();
 
 };
 
 ///////////////////////////////////////////////////////////////////////////////
 /// Class WxListados
 ///////////////////////////////////////////////////////////////////////////////
-class WxListados : public wxDialog
-{
-	private:
+class WxListados : public wxDialog {
+private:
 
-	protected:
-		wxStaticText* m_staticText13;
-		wxCheckBox* m_checkBox_list_existencias;
-		wxStaticText* m_staticText14;
-		wxCheckBox* m_checkBox_list_reposicion;
-		wxStaticText* m_staticText15;
-		wxCheckBox* m_checkBox_list_ventas;
-		wxStaticText* m_staticText16;
-		wxCheckBox* m_checkBox_list_compras;
-		wxButton* m_btn_cancelar_listados;
-		wxButton* m_btn_generar_listados;
+protected:
+    wxStaticText *m_staticText13;
+    wxCheckBox *m_checkBox_list_existencias;
+    wxStaticText *m_staticText14;
+    wxCheckBox *m_checkBox_list_reposicion;
+    wxStaticText *m_staticText15;
+    wxCheckBox *m_checkBox_list_ventas;
+    wxStaticText *m_staticText16;
+    wxCheckBox *m_checkBox_list_compras;
+    wxButton *m_btn_cancelar_listados;
+    wxButton *m_btn_generar_listados;
 
-	public:
+public:
 
-		WxListados( wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("Listados"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxDefaultSize, long style = wxDEFAULT_DIALOG_STYLE );
+    WxListados(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Listados"),
+               const wxPoint &pos = wxDefaultPosition, const wxSize &size = wxDefaultSize,
+               long style = wxDEFAULT_DIALOG_STYLE);
 
-		~WxListados();
+    ~WxListados();
 
 };
 

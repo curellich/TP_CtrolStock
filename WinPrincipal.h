@@ -21,6 +21,9 @@ protected:
     ///Reordena la Tabla cuando se hace click en el encabezado de laguna columna
     void OnClickTabla(wxGridEvent &event) override;
 
+    ///Abre la ventana de edicion para editar un producto cuando se hace doble click sobre el mismo.
+    void OnDobleClickTabla(wxGridEvent &event) override;
+
     ///Abre un dialogo para agregar un nuevo producto al deposito
     void OnClickAlta(wxCommandEvent &event) override;
 
