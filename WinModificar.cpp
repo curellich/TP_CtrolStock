@@ -33,22 +33,25 @@ void WinModificar::OnClickCancelarProducto(wxCommandEvent &event) {
 }
 
 void WinModificar::OnClickAltaoEditarProducto(wxCommandEvent &event) {
+    //Convertimos las cadenas a numeros
     int codigo, existencias, stockMin, stockMax;
     std::string descripcion;
     double precio;
     codigo = wxAtoi(m_codigo->GetValue());
-    descripcion = (std::string)(m_descripcion->GetValue());
+    descripcion = (std::string) (m_descripcion->GetValue());
     existencias = wxAtoi(m_existencias->GetValue());
     stockMin = wxAtoi(m_stockMin->GetValue());
     stockMax = wxAtoi(m_stockMax->GetValue());
     precio = wxAtof(m_precio->GetValue());
 
+    //Instanciamos un producto
     Producto producto(codigo, descripcion, existencias, stockMin, stockMax, precio);
+    //Validamos los datos
     std::string errores = producto.validacionDeIngreso();
-    if(errores.size()){
-        wxMessageBox((errores), "Errores",wxICON_ERROR,this);//Muestro los errores
-    }else{
-        miDeposito->altaProducto(producto);//Lo doy de alta
+    if (errores.size()) {
+        wxMessageBox((errores), "Errores", wxICON_ERROR, this);//Muestro los errores
+    } else {
+        (*miDeposito)[indiceProducto] = producto;
         miDeposito->guardar();//Actualizo el archivo
         EndModal(1);
     }

@@ -8,7 +8,7 @@
 #include "Utileria.h"
 
 //Constructor
-Producto::Producto(int codigo, const std::string &descripcion, int existencias, int stockMin, int stockMax, int precio)
+Producto::Producto(int codigo, const std::string &descripcion, int existencias, int stockMin, int stockMax, double precio)
         : codigo(codigo), descripcion(descripcion), existencias(existencias), stockMin(stockMin), stockMax(stockMax),
           precio(precio) {}
 
@@ -33,7 +33,7 @@ int Producto::getStockMax() const {
     return stockMax;
 }
 
-int Producto::getPrecio() const {
+double Producto::getPrecio() const {
     return precio;
 }
 
@@ -58,7 +58,7 @@ void Producto::setStockMax(int stockMax) {
     Producto::stockMax = stockMax;
 }
 
-void Producto::setPrecio(int precio) {
+void Producto::setPrecio(double precio) {
     Producto::precio = precio;
 }
 
@@ -70,20 +70,22 @@ void Producto::setPrecio(int precio) {
  */
 std::string Producto::validacionDeIngreso() {
     std::string errores;
-    if (this->codigo < 0)
-        errores += "El campo codigo no puede estar vacio y debe ingresar un valor mayor a cero\n";
+    if (this->codigo == 0)
+        errores += "Codigo incorrecto o vacio\n";
     if (descripcion.size() == 0)
         errores += "El campo descripcion no puede estar vacia\n";
     if (descripcion.size() > 256)
         errores += "El campo descripcion es demasiado larga\n";
-    if (this->existencias < 0)
-        errores += "El campo existencias no pueden estar vacio y debe ingresar un valor mayor a cero\n";
-    if (this->stockMin < 0)
-        errores += "El campo stockMin no puede estar vacio y debe ingresar un valor mayor a cero\n";
-    if (this->stockMax < 0)
-        errores += "El campo stockMax no puede estar vacio y debe ingresar un valor mayor a cero\n";
-    if (this->precio < 0)
-        errores += "El campo stockMax no puede estar vacio y debe ingresar un valor mayor a cero\n";
+    if (this->existencias == 0)
+        errores += "Existencia incorrecta o vacia \n";
+    if(this->existencias < this->stockMin)
+        errores += "Las existencias no pueden ser menores que el stock Min \n";
+    if (this->stockMin == 0)
+        errores += "StockMin incorrecto o vacio\n";
+    if (this->stockMax == 0)
+        errores += "Stockmax incorrecto o vacio\n";
+    if (this->precio == 0)
+        errores += "Precio incorrecto o vacio\n";
     return errores;
 }
 

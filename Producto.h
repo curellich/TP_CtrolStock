@@ -43,14 +43,14 @@ private:
     int existencias;
     int stockMin;
     int stockMax;
-    int precio;
+    double precio;
 
 public:
     ///Constructor de la clase Producto
     //Se establecen valores negativos por defecto para poder hacer la validacion de ingreso de datos por el usuario al
     //instanciar un producto.
     Producto(int codigo = -1, const std::string &descripcion = "", int existencias = -1, int stockMin = -1,
-             int stockMax = -1, int precio = -1);
+             int stockMax = -1, double precio = -1);
 
     ///Valida que los datos cargados sean coherentes y completos
     std::string validacionDeIngreso();
@@ -66,7 +66,7 @@ public:
 
     int getStockMax() const;
 
-    int getPrecio() const;
+    double getPrecio() const;
 
     //setters
     void setCodigo(int codigo);
@@ -79,7 +79,7 @@ public:
 
     void setStockMax(int stockMax);
 
-    void setPrecio(int precio);
+    void setPrecio(double precio);
 
     ///Guarda un registro en un archivo Binario
     void guardarEnArchivoBinario(std::ofstream &archivo);
