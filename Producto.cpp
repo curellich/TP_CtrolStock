@@ -94,7 +94,7 @@ std::string Producto::validacionDeIngreso() {
  * @param archivo un archivo abierto en modo binario y modo escritura
  */
 void Producto::guardarEnArchivoBinario(std::ofstream &archivo) {
-    registro_producto registro{};
+    registro_producto registro;
     registro.codigo = this->codigo;
     strcpy(registro.descripcion, this->descripcion.c_str());
     registro.existencias = this->existencias;
@@ -111,7 +111,7 @@ void Producto::guardarEnArchivoBinario(std::ofstream &archivo) {
  * @param archivo un archivo abierto en modo binario y lectura
  */
 void Producto::leerDesdeUnArchivoBinario(std::ifstream &archivo) {
-    registro_producto registro{};
+    registro_producto registro;
     archivo.read((char *) &registro, sizeof(registro));
     this->codigo = registro.codigo;
     this->descripcion = registro.descripcion;
