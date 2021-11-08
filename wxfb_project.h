@@ -137,6 +137,11 @@ protected:
     wxButton *m_btn_cancelar_compra_venta;
     wxButton *m_btn_confirmar_compra_venta;
 
+    // Virtual event handlers, override them in your derived class
+    virtual void OnClickCancelarOperacion(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickRealizarOperacion(wxCommandEvent &event) { event.Skip(); }
+
 public:
 
     WxOperaciones(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Operaciones"),
@@ -164,6 +169,11 @@ protected:
     wxCheckBox *m_checkBox_list_compras;
     wxButton *m_btn_cancelar_listados;
     wxButton *m_btn_generar_listados;
+
+    // Virtual event handlers, override them in your derived class
+    virtual void OnClickCancelarListado(wxCommandEvent &event) { event.Skip(); }
+
+    virtual void OnClickGenerarListado(wxCommandEvent &event) { event.Skip(); }
 
 public:
 

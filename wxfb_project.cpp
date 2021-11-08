@@ -351,9 +351,22 @@ WxOperaciones::WxOperaciones(wxWindow *parent, wxWindowID id, const wxString &ti
     bSizer12->Fit(this);
 
     this->Centre(wxBOTH);
+
+    // Connect Events
+    m_btn_cancelar_compra_venta->Connect(wxEVT_COMMAND_BUTTON_CLICKED,
+                                         wxCommandEventHandler(WxOperaciones::OnClickCancelarOperacion), NULL, this);
+    m_btn_confirmar_compra_venta->Connect(wxEVT_COMMAND_BUTTON_CLICKED,
+                                          wxCommandEventHandler(WxOperaciones::OnClickRealizarOperacion), NULL, this);
 }
 
 WxOperaciones::~WxOperaciones() {
+    // Disconnect Events
+    m_btn_cancelar_compra_venta->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED,
+                                            wxCommandEventHandler(WxOperaciones::OnClickCancelarOperacion), NULL, this);
+    m_btn_confirmar_compra_venta->Disconnect(wxEVT_COMMAND_BUTTON_CLICKED,
+                                             wxCommandEventHandler(WxOperaciones::OnClickRealizarOperacion), NULL,
+                                             this);
+
 }
 
 WxListados::WxListados(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &pos, const wxSize &size,
@@ -435,7 +448,15 @@ WxListados::WxListados(wxWindow *parent, wxWindowID id, const wxString &title, c
     bSizer17->Fit(this);
 
     this->Centre(wxBOTH);
+    // Connect Events
+    m_btn_cancelar_listados->Connect(wxEVT_COMMAND_BUTTON_CLICKED,
+                                     wxCommandEventHandler(WxListados::OnClickCancelarListado), NULL, this);
+    m_btn_generar_listados->Connect(wxEVT_COMMAND_BUTTON_CLICKED,
+                                    wxCommandEventHandler(WxListados::OnClickGenerarListado), NULL, this);
 }
 
 WxListados::~WxListados() {
+    // Disconnect Events
+    m_btn_cancelar_listados->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( WxListados::OnClickCancelarListado ), NULL, this );
+    m_btn_generar_listados->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( WxListados::OnClickGenerarListado ), NULL, this );
 }
