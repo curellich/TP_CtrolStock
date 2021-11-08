@@ -66,7 +66,7 @@ public:
     void eliminarProducto(int i);
 /*
     //Operaciones
-    ///@nota Vende un Producto
+    ///@nota Vende un Producto existente
     void vender();
 
     ///@nota Compra un Producto existente
@@ -91,12 +91,22 @@ public:
     ///@nota Ordena la listaProductos
     void ordenar(criterioOrdenamiento criterio);
 
+    ///@nota Busqueda por codigo para validacion
+    int buscarPorCodigoParaValidacionDuplicados(int codigo, int indice);
+
+
+    ///@nota Busqueda por descripcion para validacion
+    int buscarPorDescripcionParaValidacionDuplicados(std::string descripcion, int indice);
+
     //funciones para realizar la busqueda de un producto por campo
     ///@nota Buscar producto por codigo
     int buscarPorCodigo(int codigo, int posicionDesde);
 
     ///@nota Buscar producto por descripciones
     int buscarPorDescripcion(std::string parte_de_la_descripcion, int posicioDesde);
+
+    ///@validcion de deposito "evita productos duplicados, por codigo o descripcion de
+    std::string validacionDeDeposito(int codigo, std::string descripcion, int indice);
 };
 
 

@@ -12,7 +12,7 @@
 cmake_minimum_required(VERSION 2.8.12)
 
 # Name the project
-project(OtraPrueba)
+project(Tp_CtrolStock)
 
 # Request the required wxWidgets libs
 find_package(wxWidgets 3.1 COMPONENTS all REQUIRED)

@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/OtraPrueba.dir/all
+all: CMakeFiles/Tp_CtrolStock.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/OtraPrueba.dir/clean
+clean: CMakeFiles/Tp_CtrolStock.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/OtraPrueba.dir
+# Target rules for target CMakeFiles/Tp_CtrolStock.dir
 
 # All Build rule for target.
-CMakeFiles/OtraPrueba.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target OtraPrueba"
-.PHONY : CMakeFiles/OtraPrueba.dir/all
+CMakeFiles/Tp_CtrolStock.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Tp_CtrolStock"
+.PHONY : CMakeFiles/Tp_CtrolStock.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/OtraPrueba.dir/rule: cmake_check_build_system
+CMakeFiles/Tp_CtrolStock.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OtraPrueba.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Tp_CtrolStock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/OtraPrueba.dir/rule
+.PHONY : CMakeFiles/Tp_CtrolStock.dir/rule
 
 # Convenience name for target.
-OtraPrueba: CMakeFiles/OtraPrueba.dir/rule
-.PHONY : OtraPrueba
+Tp_CtrolStock: CMakeFiles/Tp_CtrolStock.dir/rule
+.PHONY : Tp_CtrolStock
 
 # clean rule for target.
-CMakeFiles/OtraPrueba.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/clean
-.PHONY : CMakeFiles/OtraPrueba.dir/clean
+CMakeFiles/Tp_CtrolStock.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/clean
+.PHONY : CMakeFiles/Tp_CtrolStock.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

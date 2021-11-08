@@ -163,7 +163,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=OtraPrueba
+CMAKE_PROJECT_NAME:STATIC=Tp_CtrolStock
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -235,6 +235,12 @@ OtraPrueba_SOURCE_DIR:STATIC=/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas I
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//Value Computed by CMake
+Tp_CtrolStock_BINARY_DIR:STATIC=/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug
+
+//Value Computed by CMake
+Tp_CtrolStock_SOURCE_DIR:STATIC=/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock
 
 //Location of wxWidgets library configuration provider binary (wx-config).
 wxWidgets_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/wx-config

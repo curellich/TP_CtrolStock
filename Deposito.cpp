@@ -104,6 +104,46 @@ int Deposito::buscarPorDescripcion(std::string parte_de_la_descripcion, int posi
     return NO_ENCONTRADO;
 }
 
+int Deposito::buscarPorCodigoParaValidacionDuplicados(int codigo, int indice) {
+    int cantProductos = cantidadProductos();
+    for (int i = 0; i < cantProductos; ++i) {
+        if (i == indice) //Con esto evito que se considere un error el querer mantener el mismo codigo en el producto.
+            continue;
+        Producto &producto = listaProductos[i];
+        int codigoProducto = producto.getCodigo();
+        if (codigo == codigoProducto) {
+            return i;
+        }
+    }
+    return NO_ENCONTRADO;
+}
+
+int Deposito::buscarPorDescripcionParaValidacionDuplicados(std::string descripcion, int indice) {
+    convertir_cadena_minusculas(descripcion);
+    int cantProductos = cantidadProductos();
+    for (int i = 0; i < cantProductos; ++i) {
+        if (i == indice)// evito que se considere un error el querer mantener la misma descripcion en el producto.
+            continue;
+        Producto &producto = listaProductos[i];
+        std::string descripcionProducto = producto.getDescripcion();
+        convertir_cadena_minusculas(descripcionProducto);
+        if (descripcion == descripcionProducto) {
+            return i;
+        }
+    }
+    return NO_ENCONTRADO;
+}
+
+std::string Deposito::validacionDeDeposito(int codigo, std::string descripcion, int indice) {
+    std::string errores;
+    if (this->buscarPorCodigoParaValidacionDuplicados(codigo,indice) >= 0)
+        errores += "Codigo de producto Duplicado\n";
+    if (this->buscarPorDescripcionParaValidacionDuplicados(descripcion, indice) >= 0)
+        errores += "Descripcion de producto duplicada\n";
+
+    return errores;
+}
+
 
 
 

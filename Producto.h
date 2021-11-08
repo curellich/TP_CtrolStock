@@ -53,7 +53,7 @@ public:
              int stockMax = -1, double precio = -1);
 
     ///Valida que los datos cargados sean coherentes y completos
-    std::string validacionDeIngreso();
+    std::string validacionDeConsistenciaDatos();
 
     //getters
     int getCodigo() const;

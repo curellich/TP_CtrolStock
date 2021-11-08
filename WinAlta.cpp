@@ -34,7 +34,11 @@ void WinAlta::OnClickAltaoEditarProducto(wxCommandEvent &event) {
     precio = wxAtof(m_precio->GetValue());
 
     Producto producto(codigo, descripcion, existencias, stockMin, stockMax, precio);
-    std::string errores = producto.validacionDeIngreso();
+    //Validamos los datos por su consistencia
+    std::string errores = producto.validacionDeConsistenciaDatos();
+    //Validacion de deposito (colocamos indice -1 ya que en el alta no interesa el indice)
+    errores += miDeposito->validacionDeDeposito(producto.getCodigo(),producto.getDescripcion(),-1);
+
     if(errores.size()){
         wxMessageBox((errores), "Errores",wxICON_ERROR,this);//Muestro los errores
     }else{

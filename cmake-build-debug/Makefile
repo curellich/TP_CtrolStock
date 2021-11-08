@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OtraPrueba
+# Target rules for targets named Tp_CtrolStock
 
 # Build rule for target.
-OtraPrueba: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OtraPrueba
-.PHONY : OtraPrueba
+Tp_CtrolStock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tp_CtrolStock
+.PHONY : Tp_CtrolStock
 
 # fast build rule for target.
-OtraPrueba/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/build
-.PHONY : OtraPrueba/fast
+Tp_CtrolStock/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/build
+.PHONY : Tp_CtrolStock/fast
 
 Application.o: Application.cpp.o
 .PHONY : Application.o
 
 # target to build an object file
 Application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Application.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Application.cpp.o
 .PHONY : Application.cpp.o
 
 Application.i: Application.cpp.i
@@ -142,7 +142,7 @@ Application.i: Application.cpp.i
 
 # target to preprocess a source file
 Application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Application.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Application.cpp.i
 .PHONY : Application.cpp.i
 
 Application.s: Application.cpp.s
@@ -150,7 +150,7 @@ Application.s: Application.cpp.s
 
 # target to generate assembly for a file
 Application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Application.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Application.cpp.s
 .PHONY : Application.cpp.s
 
 Deposito.o: Deposito.cpp.o
@@ -158,7 +158,7 @@ Deposito.o: Deposito.cpp.o
 
 # target to build an object file
 Deposito.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Deposito.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Deposito.cpp.o
 .PHONY : Deposito.cpp.o
 
 Deposito.i: Deposito.cpp.i
@@ -166,7 +166,7 @@ Deposito.i: Deposito.cpp.i
 
 # target to preprocess a source file
 Deposito.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Deposito.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Deposito.cpp.i
 .PHONY : Deposito.cpp.i
 
 Deposito.s: Deposito.cpp.s
@@ -174,7 +174,7 @@ Deposito.s: Deposito.cpp.s
 
 # target to generate assembly for a file
 Deposito.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Deposito.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Deposito.cpp.s
 .PHONY : Deposito.cpp.s
 
 Producto.o: Producto.cpp.o
@@ -182,7 +182,7 @@ Producto.o: Producto.cpp.o
 
 # target to build an object file
 Producto.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Producto.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Producto.cpp.o
 .PHONY : Producto.cpp.o
 
 Producto.i: Producto.cpp.i
@@ -190,7 +190,7 @@ Producto.i: Producto.cpp.i
 
 # target to preprocess a source file
 Producto.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Producto.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Producto.cpp.i
 .PHONY : Producto.cpp.i
 
 Producto.s: Producto.cpp.s
@@ -198,7 +198,7 @@ Producto.s: Producto.cpp.s
 
 # target to generate assembly for a file
 Producto.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Producto.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Producto.cpp.s
 .PHONY : Producto.cpp.s
 
 Utileria.o: Utileria.cpp.o
@@ -206,7 +206,7 @@ Utileria.o: Utileria.cpp.o
 
 # target to build an object file
 Utileria.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Utileria.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Utileria.cpp.o
 .PHONY : Utileria.cpp.o
 
 Utileria.i: Utileria.cpp.i
@@ -214,7 +214,7 @@ Utileria.i: Utileria.cpp.i
 
 # target to preprocess a source file
 Utileria.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Utileria.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Utileria.cpp.i
 .PHONY : Utileria.cpp.i
 
 Utileria.s: Utileria.cpp.s
@@ -222,7 +222,7 @@ Utileria.s: Utileria.cpp.s
 
 # target to generate assembly for a file
 Utileria.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/Utileria.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Utileria.cpp.s
 .PHONY : Utileria.cpp.s
 
 WinAlta.o: WinAlta.cpp.o
@@ -230,7 +230,7 @@ WinAlta.o: WinAlta.cpp.o
 
 # target to build an object file
 WinAlta.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinAlta.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinAlta.cpp.o
 .PHONY : WinAlta.cpp.o
 
 WinAlta.i: WinAlta.cpp.i
@@ -238,7 +238,7 @@ WinAlta.i: WinAlta.cpp.i
 
 # target to preprocess a source file
 WinAlta.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinAlta.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinAlta.cpp.i
 .PHONY : WinAlta.cpp.i
 
 WinAlta.s: WinAlta.cpp.s
@@ -246,7 +246,7 @@ WinAlta.s: WinAlta.cpp.s
 
 # target to generate assembly for a file
 WinAlta.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinAlta.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinAlta.cpp.s
 .PHONY : WinAlta.cpp.s
 
 WinCompra.o: WinCompra.cpp.o
@@ -254,7 +254,7 @@ WinCompra.o: WinCompra.cpp.o
 
 # target to build an object file
 WinCompra.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinCompra.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinCompra.cpp.o
 .PHONY : WinCompra.cpp.o
 
 WinCompra.i: WinCompra.cpp.i
@@ -262,7 +262,7 @@ WinCompra.i: WinCompra.cpp.i
 
 # target to preprocess a source file
 WinCompra.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinCompra.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinCompra.cpp.i
 .PHONY : WinCompra.cpp.i
 
 WinCompra.s: WinCompra.cpp.s
@@ -270,7 +270,7 @@ WinCompra.s: WinCompra.cpp.s
 
 # target to generate assembly for a file
 WinCompra.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinCompra.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinCompra.cpp.s
 .PHONY : WinCompra.cpp.s
 
 WinListar.o: WinListar.cpp.o
@@ -278,7 +278,7 @@ WinListar.o: WinListar.cpp.o
 
 # target to build an object file
 WinListar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinListar.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinListar.cpp.o
 .PHONY : WinListar.cpp.o
 
 WinListar.i: WinListar.cpp.i
@@ -286,7 +286,7 @@ WinListar.i: WinListar.cpp.i
 
 # target to preprocess a source file
 WinListar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinListar.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinListar.cpp.i
 .PHONY : WinListar.cpp.i
 
 WinListar.s: WinListar.cpp.s
@@ -294,7 +294,7 @@ WinListar.s: WinListar.cpp.s
 
 # target to generate assembly for a file
 WinListar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinListar.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinListar.cpp.s
 .PHONY : WinListar.cpp.s
 
 WinModificar.o: WinModificar.cpp.o
@@ -302,7 +302,7 @@ WinModificar.o: WinModificar.cpp.o
 
 # target to build an object file
 WinModificar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinModificar.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinModificar.cpp.o
 .PHONY : WinModificar.cpp.o
 
 WinModificar.i: WinModificar.cpp.i
@@ -310,7 +310,7 @@ WinModificar.i: WinModificar.cpp.i
 
 # target to preprocess a source file
 WinModificar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinModificar.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinModificar.cpp.i
 .PHONY : WinModificar.cpp.i
 
 WinModificar.s: WinModificar.cpp.s
@@ -318,7 +318,7 @@ WinModificar.s: WinModificar.cpp.s
 
 # target to generate assembly for a file
 WinModificar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinModificar.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinModificar.cpp.s
 .PHONY : WinModificar.cpp.s
 
 WinPrincipal.o: WinPrincipal.cpp.o
@@ -326,7 +326,7 @@ WinPrincipal.o: WinPrincipal.cpp.o
 
 # target to build an object file
 WinPrincipal.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinPrincipal.cpp.o
 .PHONY : WinPrincipal.cpp.o
 
 WinPrincipal.i: WinPrincipal.cpp.i
@@ -334,7 +334,7 @@ WinPrincipal.i: WinPrincipal.cpp.i
 
 # target to preprocess a source file
 WinPrincipal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinPrincipal.cpp.i
 .PHONY : WinPrincipal.cpp.i
 
 WinPrincipal.s: WinPrincipal.cpp.s
@@ -342,7 +342,7 @@ WinPrincipal.s: WinPrincipal.cpp.s
 
 # target to generate assembly for a file
 WinPrincipal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinPrincipal.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinPrincipal.cpp.s
 .PHONY : WinPrincipal.cpp.s
 
 WinVenta.o: WinVenta.cpp.o
@@ -350,7 +350,7 @@ WinVenta.o: WinVenta.cpp.o
 
 # target to build an object file
 WinVenta.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinVenta.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinVenta.cpp.o
 .PHONY : WinVenta.cpp.o
 
 WinVenta.i: WinVenta.cpp.i
@@ -358,7 +358,7 @@ WinVenta.i: WinVenta.cpp.i
 
 # target to preprocess a source file
 WinVenta.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinVenta.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinVenta.cpp.i
 .PHONY : WinVenta.cpp.i
 
 WinVenta.s: WinVenta.cpp.s
@@ -366,7 +366,7 @@ WinVenta.s: WinVenta.cpp.s
 
 # target to generate assembly for a file
 WinVenta.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/WinVenta.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/WinVenta.cpp.s
 .PHONY : WinVenta.cpp.s
 
 wxfb_project.o: wxfb_project.cpp.o
@@ -374,7 +374,7 @@ wxfb_project.o: wxfb_project.cpp.o
 
 # target to build an object file
 wxfb_project.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/wxfb_project.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/wxfb_project.cpp.o
 .PHONY : wxfb_project.cpp.o
 
 wxfb_project.i: wxfb_project.cpp.i
@@ -382,7 +382,7 @@ wxfb_project.i: wxfb_project.cpp.i
 
 # target to preprocess a source file
 wxfb_project.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/wxfb_project.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/wxfb_project.cpp.i
 .PHONY : wxfb_project.cpp.i
 
 wxfb_project.s: wxfb_project.cpp.s
@@ -390,7 +390,7 @@ wxfb_project.s: wxfb_project.cpp.s
 
 # target to generate assembly for a file
 wxfb_project.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OtraPrueba.dir/build.make CMakeFiles/OtraPrueba.dir/wxfb_project.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/wxfb_project.cpp.s
 .PHONY : wxfb_project.cpp.s
 
 # Help Target
@@ -401,7 +401,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OtraPrueba"
+	@echo "... Tp_CtrolStock"
 	@echo "... Application.o"
 	@echo "... Application.i"
 	@echo "... Application.s"

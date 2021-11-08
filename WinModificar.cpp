@@ -46,8 +46,12 @@ void WinModificar::OnClickAltaoEditarProducto(wxCommandEvent &event) {
 
     //Instanciamos un producto
     Producto producto(codigo, descripcion, existencias, stockMin, stockMax, precio);
-    //Validamos los datos
-    std::string errores = producto.validacionDeIngreso();
+    //Validamos los datos por su consistencia
+    std::string errores = producto.validacionDeConsistenciaDatos();
+    //Validamos que no se intente usar una descripcion o codigo existente(duplicado).
+    errores += miDeposito->validacionDeDeposito(producto.getCodigo(),producto.getDescripcion(),indiceProducto);
+
+
     if (errores.size()) {
         wxMessageBox((errores), "Errores", wxICON_ERROR, this);//Muestro los errores
     } else {

@@ -68,7 +68,7 @@ void Producto::setPrecio(double precio) {
  * registro_producto para poder almacenarlo en el archivo binario.
  * @return Una cadena vacia si no hay errores o una cadena con los mensajes de los errores.
  */
-std::string Producto::validacionDeIngreso() {
+std::string Producto::validacionDeConsistenciaDatos() {
     std::string errores;
     if (this->codigo == 0)
         errores += "Codigo incorrecto o vacio\n";
@@ -80,6 +80,8 @@ std::string Producto::validacionDeIngreso() {
         errores += "Existencia incorrecta o vacia \n";
     if(this->existencias < this->stockMin)
         errores += "Las existencias no pueden ser menores que el stock Min \n";
+    if(this->existencias > this->stockMax)
+        errores += "Las existencias no pueden ser mayores que el stock Max \n";
     if (this->stockMin == 0)
         errores += "StockMin incorrecto o vacio\n";
     if (this->stockMax == 0)
