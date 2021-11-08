@@ -1,7 +1,22 @@
+/**
+ * @archivo WinCompra.cpp
+ * @nota Implementa los eventos de la ventana para comprar productos existentes
+ */
+#include <wx/msgdlg.h>
 #include "WinCompra.h"
+#include "Producto.h"
+#include "Deposito.h"
 
-WinCompra::WinCompra(wxWindow *parent) : WxOperaciones(parent) {
 
+WinCompra::WinCompra(wxWindow *parent, Deposito *miDeposito, int indice) : WxOperaciones(parent),
+                                                                           miDeposito(miDeposito),
+                                                                           indiceProducto(indice) {
+    Producto &producto = (*miDeposito)[indice];
+    m_codigo_operaciones->SetValue(wxString() << producto.getCodigo());
+    m_descripcion_operaciones->SetValue(producto.getDescripcion());
+    m_btn_cancelar_compra_venta->SetLabel("Cancelar");
+    m_btn_confirmar_compra_venta->SetLabel("Comprar");
+    SetTitle("ComprarProducto");
 }
 
 WinCompra::~WinCompra() {
@@ -9,11 +24,13 @@ WinCompra::~WinCompra() {
 }
 
 void WinCompra::OnClickCancelarOperacion(wxCommandEvent &event) {
-    event.Skip();
+    EndModal(0);
 }
 
 void WinCompra::OnClickRealizarOperacion(wxCommandEvent &event) {
     event.Skip();
 }
+
+
 
 

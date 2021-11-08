@@ -52,7 +52,7 @@ protected:
     // Virtual event handlers, override them in your derived class
     virtual void OnCambiaTamanio(wxSizeEvent &event) { event.Skip(); }
 
-    virtual void EnterBuscar(wxCommandEvent &event) { event.Skip(); }
+    virtual void OnEnterBuscar(wxCommandEvent &event) { event.Skip(); }
 
     virtual void OnClickBuscar(wxCommandEvent &event) { event.Skip(); }
 

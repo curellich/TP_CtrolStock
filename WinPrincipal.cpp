@@ -3,6 +3,7 @@
 #include "Producto.h"
 #include "WinAlta.h"
 #include "WinModificar.h"
+#include "WinCompra.h"
 #include <wx/msgdlg.h>
 
 /**
@@ -36,6 +37,13 @@ void WinPrincipal::cargarFila(int i) {
     m_tabla->SetCellValue(i, 3, wxString() << producto.getStockMin());
     m_tabla->SetCellValue(i, 4, wxString() << producto.getStockMax());
     m_tabla->SetCellValue(i, 5, wxString() << producto.getPrecio());
+}
+
+/**
+ * El enter en el cuadro de texto equivale a hacer click en el boton "Buscar"
+ */
+void WinPrincipal::OnEnterBuscar(wxCommandEvent &event) {
+    OnClickBuscar(event);
 }
 
 /**
@@ -139,7 +147,11 @@ void WinPrincipal::OnClickBaja(wxCommandEvent &event) {
 }
 
 void WinPrincipal::OnClickCompra(wxCommandEvent &event) {
-    event.Skip();
+    int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
+    WinCompra nuevaVentana(this, miDeposito, filaSeleccionada);
+    if (nuevaVentana.ShowModal()) { //Mostrar y esperar
+        cargarFila(filaSeleccionada); //actulizar en la m_tabla
+    }
 }
 
 void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
@@ -162,12 +174,6 @@ void WinPrincipal::OnDobleClickTabla(wxGridEvent &event) {
 
 }
 
-/**
- * El enter en el cuadro de texto equivale a hacer click en el boton "Buscar"
- */
-void WinPrincipal::EnterBuscar(wxCommandEvent &event) {
-    OnClickBuscar(event);
-}
 
 /**
  * Las columnas de la tabla no se ajustan solas cuando se redimensiona la ventana.
@@ -186,7 +192,7 @@ void WinPrincipal::OnCambiaTamanio(wxSizeEvent &event) {
     int anchoTotalNuevo = m_tabla->GetSize().GetWidth(); //obtengo el ancho nuevo de la tabla
     m_tabla->BeginBatch(); //Permite que cuando cambiamos varias cosas, solo redibuje al final
     for (int i = 0; i < 6; ++i) {
-        m_tabla->SetColSize(i,tamanios[i]*anchoTotalNuevo/anchoTotalViejo);
+        m_tabla->SetColSize(i, tamanios[i] * anchoTotalNuevo / anchoTotalViejo);
     }
     m_tabla->EndBatch();
 
