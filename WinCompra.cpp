@@ -13,10 +13,12 @@ WinCompra::WinCompra(wxWindow *parent, Deposito *miDeposito, int indice) : WxOpe
                                                                            indiceProducto(indice) {
     Producto &producto = (*miDeposito)[indice];
     m_codigo_operaciones->SetValue(wxString() << producto.getCodigo());
+    m_codigo_operaciones->Disable();
     m_descripcion_operaciones->SetValue(producto.getDescripcion());
+    m_descripcion_operaciones->Disable();
     m_btn_cancelar_compra_venta->SetLabel("Cancelar");
     m_btn_confirmar_compra_venta->SetLabel("Comprar");
-    SetTitle("ComprarProducto");
+    SetTitle("Comprar Producto");
 }
 
 WinCompra::~WinCompra() {

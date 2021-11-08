@@ -4,6 +4,7 @@
 #include "WinAlta.h"
 #include "WinModificar.h"
 #include "WinCompra.h"
+#include "WinVenta.h"
 #include <wx/msgdlg.h>
 
 /**
@@ -155,7 +156,11 @@ void WinPrincipal::OnClickCompra(wxCommandEvent &event) {
 }
 
 void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
-    event.Skip();
+    int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
+    WinVenta nuevaVentana(this, miDeposito, filaSeleccionada);
+    if (nuevaVentana.ShowModal()) { //Mostrar y esperar
+        cargarFila(filaSeleccionada); //actulizar en la m_tabla
+    }
 }
 
 void WinPrincipal::OnClickListados(wxCommandEvent &event) {
