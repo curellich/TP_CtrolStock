@@ -5,6 +5,7 @@
 #include "WinModificar.h"
 #include "WinCompra.h"
 #include "WinVenta.h"
+#include "WinListar.h"
 #include <wx/msgdlg.h>
 
 /**
@@ -164,7 +165,9 @@ void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
 }
 
 void WinPrincipal::OnClickListados(wxCommandEvent &event) {
-    event.Skip();
+    WinListar nuevaVentana(this, miDeposito); //Creamos la ventana
+    if (nuevaVentana.ShowModal()) { //mostrar y dejar en espera
+    }
 }
 
 /**
