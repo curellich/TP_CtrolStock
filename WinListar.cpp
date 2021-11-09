@@ -8,7 +8,6 @@
 #include "Deposito.h"
 
 
-
 WinListar::WinListar(wxWindow *parent, Deposito *miDeposito) : WxListados(parent), miDeposito(miDeposito) {
     SetTitle("Listados");
 }
@@ -22,6 +21,8 @@ void WinListar::OnClickCancelarListado(wxCommandEvent &event) {
 }
 
 void WinListar::OnClickGenerarListado(wxCommandEvent &event) {
-    event.Skip();
+    miDeposito->listarProductorAReponer();
+    miDeposito->listarExistencias();
+    EndModal(1);
 }
 

@@ -64,21 +64,14 @@ public:
 
     ///@nota Elimina un producto de la listaProductos
     void eliminarProducto(int i);
-/*
 
     //Listados todos tendran por salida archivos.
     ///@nota Lista las existencias de cada producto en un archivo
-    void listarExistencias();
+    bool listarExistencias();
 
     ///@nota Lista los productos a reponer (exitencias menores al stockMin) en un archivo
-    void listarProductorAReponer();
+    bool listarProductorAReponer();
 
-    ///@nota Lista las ventas realizadas en un archivo
-    void listarVentas();
-
-    ///@nota Lista las compras realizadas en un archivo
-    void listarCompras();
-*/
 
     //Extras
     ///@nota Ordena la listaProductos
