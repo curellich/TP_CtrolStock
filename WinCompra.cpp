@@ -6,6 +6,7 @@
 #include "WinCompra.h"
 #include "Producto.h"
 #include "Deposito.h"
+#include "LogOperaciones.h"
 
 
 WinCompra::WinCompra(wxWindow *parent, Deposito *miDeposito, int indice) : WxOperaciones(parent),
@@ -42,6 +43,8 @@ void WinCompra::OnClickRealizarOperacion(wxCommandEvent &event) {
         wxMessageBox((errores), "Errores", wxICON_ERROR, this);//Muestro los errores
     } else {
         (*miDeposito)[indiceProducto] = producto;
+        Operaciones operacion(miDeposito, indiceProducto, 'c', cantidad);
+        operacion.guardarCompra();
         miDeposito->guardar();//Actualizo el archivo
         EndModal(1);
     }

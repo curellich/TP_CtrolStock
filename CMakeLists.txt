@@ -48,6 +48,8 @@ set(SOURCE_FILES
         WinListar.h
         wxfb_project.cpp
         wxfb_project.h
+        LogOperaciones.cpp
+        LogOperaciones.h
         )
 
 # wxWidgets include (this will do all the magic to configure everything)
@@ -56,7 +58,7 @@ include( "${wxWidgets_USE_FILE}" )
 # If we build for windows systems, we also include the resource file
 # containing the manifest, icon and other resources
 if(WIN32)
-    set(SOURCE_FILES ${SOURCE_FILES} sample.rc Operaciones.cpp Operaciones.h)
+    set(SOURCE_FILES ${SOURCE_FILES} sample.rc )
 endif(WIN32)
 
 # the above paths and defines will be used in this build

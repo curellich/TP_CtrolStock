@@ -177,6 +177,30 @@ Deposito.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Deposito.cpp.s
 .PHONY : Deposito.cpp.s
 
+LogOperaciones.o: LogOperaciones.cpp.o
+.PHONY : LogOperaciones.o
+
+# target to build an object file
+LogOperaciones.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/LogOperaciones.cpp.o
+.PHONY : LogOperaciones.cpp.o
+
+LogOperaciones.i: LogOperaciones.cpp.i
+.PHONY : LogOperaciones.i
+
+# target to preprocess a source file
+LogOperaciones.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/LogOperaciones.cpp.i
+.PHONY : LogOperaciones.cpp.i
+
+LogOperaciones.s: LogOperaciones.cpp.s
+.PHONY : LogOperaciones.s
+
+# target to generate assembly for a file
+LogOperaciones.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/LogOperaciones.cpp.s
+.PHONY : LogOperaciones.cpp.s
+
 Producto.o: Producto.cpp.o
 .PHONY : Producto.o
 
@@ -408,6 +432,9 @@ help:
 	@echo "... Deposito.o"
 	@echo "... Deposito.i"
 	@echo "... Deposito.s"
+	@echo "... LogOperaciones.o"
+	@echo "... LogOperaciones.i"
+	@echo "... LogOperaciones.s"
 	@echo "... Producto.o"
 	@echo "... Producto.i"
 	@echo "... Producto.s"

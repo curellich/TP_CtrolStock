@@ -81,12 +81,12 @@ clean: CMakeFiles/Tp_CtrolStock.dir/clean
 CMakeFiles/Tp_CtrolStock.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Tp_CtrolStock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target Tp_CtrolStock"
 .PHONY : CMakeFiles/Tp_CtrolStock.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Tp_CtrolStock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Tp_CtrolStock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/viking/Desktop/FIE/3er-Año/009-Paradigmas III/000-TP Final/000-TP_CtrolStock/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/Tp_CtrolStock.dir/rule

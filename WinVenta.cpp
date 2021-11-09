@@ -6,6 +6,7 @@
 #include "WinVenta.h"
 #include "Producto.h"
 #include "Deposito.h"
+#include "LogOperaciones.h"
 
 
 WinVenta::WinVenta(wxWindow *parent, Deposito *miDeposito, int indice) : WxOperaciones(parent), miDeposito(miDeposito),
@@ -41,6 +42,8 @@ void WinVenta::OnClickRealizarOperacion(wxCommandEvent &event) {
         wxMessageBox((errores), "Errores", wxICON_ERROR, this);//Muestro los errores
     } else {
         (*miDeposito)[indiceProducto] = producto;
+        Operaciones operacion(miDeposito, indiceProducto, 'v', cantidad);
+        operacion.guardarVenta();
         miDeposito->guardar();//Actualizo el archivo
         EndModal(1);
     }
