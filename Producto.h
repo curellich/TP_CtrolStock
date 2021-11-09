@@ -55,6 +55,12 @@ public:
     ///Valida que los datos cargados sean coherentes y completos
     std::string validacionDeConsistenciaDatos();
 
+    ///Validacion de operaciones de compra  de un producto donde se modifica su existencia
+    std::string validacionOperacionesDeCompra();
+
+    ///Validacion de operaciones de  venta de un producto donde se modifica su existencia
+    std::string validacionOperacionesDeVenta();
+
     //getters
     int getCodigo() const;
 
@@ -80,6 +86,14 @@ public:
     void setStockMax(int stockMax);
 
     void setPrecio(double precio);
+
+    //Operaciones con un producto (esto modifica sus existencias)
+    ///@nota Vende un Producto existente
+    void vender(int cantidadAVender);
+
+    ///@nota Compra un Producto existente
+    void comprar(int cantidadAComprar);
+
 
     ///Guarda un registro en un archivo Binario
     void guardarEnArchivoBinario(std::ofstream &archivo);

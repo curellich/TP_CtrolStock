@@ -136,13 +136,14 @@ int Deposito::buscarPorDescripcionParaValidacionDuplicados(std::string descripci
 
 std::string Deposito::validacionDeDeposito(int codigo, std::string descripcion, int indice) {
     std::string errores;
-    if (this->buscarPorCodigoParaValidacionDuplicados(codigo,indice) >= 0)
+    if (this->buscarPorCodigoParaValidacionDuplicados(codigo, indice) >= 0)
         errores += "Codigo de producto Duplicado\n";
     if (this->buscarPorDescripcionParaValidacionDuplicados(descripcion, indice) >= 0)
         errores += "Descripcion de producto duplicada\n";
 
     return errores;
 }
+
 
 
 

@@ -30,7 +30,21 @@ void WinCompra::OnClickCancelarOperacion(wxCommandEvent &event) {
 }
 
 void WinCompra::OnClickRealizarOperacion(wxCommandEvent &event) {
-    event.Skip();
+    int cantidad = wxAtoi(m_cantidad_operaciones->GetValue());
+
+    //Instanciamos el producto
+    Producto producto = (*miDeposito)[indiceProducto];
+    //Compro mas cantidades de un producto.
+    producto.comprar(cantidad);
+    //Valido la operacion de compra
+    std::string errores = producto.validacionOperacionesDeCompra();
+    if (errores.size()) {
+        wxMessageBox((errores), "Errores", wxICON_ERROR, this);//Muestro los errores
+    } else {
+        (*miDeposito)[indiceProducto] = producto;
+        miDeposito->guardar();//Actualizo el archivo
+        EndModal(1);
+    }
 }
 
 

@@ -65,13 +65,6 @@ public:
     ///@nota Elimina un producto de la listaProductos
     void eliminarProducto(int i);
 /*
-    //Operaciones
-    ///@nota Vende un Producto existente
-    void vender();
-
-    ///@nota Compra un Producto existente
-    void comprar();
-
 
     //Listados todos tendran por salida archivos.
     ///@nota Lista las existencias de cada producto en un archivo

@@ -4,11 +4,12 @@
  */
 
 #include "Producto.h"
-#include "string.h"
+#include <string>
 #include "Utileria.h"
 
 //Constructor
-Producto::Producto(int codigo, const std::string &descripcion, int existencias, int stockMin, int stockMax, double precio)
+Producto::Producto(int codigo, const std::string &descripcion, int existencias, int stockMin, int stockMax,
+                   double precio)
         : codigo(codigo), descripcion(descripcion), existencias(existencias), stockMin(stockMin), stockMax(stockMax),
           precio(precio) {}
 
@@ -72,22 +73,32 @@ std::string Producto::validacionDeConsistenciaDatos() {
     std::string errores;
     if (this->codigo == 0)
         errores += "Codigo incorrecto o vacio\n";
+    if (this->codigo < 0)
+        errores += "El codigo no puede ser negativo\n";
     if (descripcion.size() == 0)
         errores += "El campo descripcion no puede estar vacia\n";
     if (descripcion.size() > 256)
         errores += "El campo descripcion es demasiado larga\n";
     if (this->existencias == 0)
         errores += "Existencia incorrecta o vacia \n";
-    if(this->existencias < this->stockMin)
+    if (this->existencias < 0)
+        errores += "Las existencias no pueden ser negativas \n";
+    if (this->existencias < this->stockMin)
         errores += "Las existencias no pueden ser menores que el stock Min \n";
-    if(this->existencias > this->stockMax)
+    if (this->existencias > this->stockMax)
         errores += "Las existencias no pueden ser mayores que el stock Max \n";
     if (this->stockMin == 0)
         errores += "StockMin incorrecto o vacio\n";
+    if (this->stockMin < 0)
+        errores += "El strocMin no puede ser negativo\n";
     if (this->stockMax == 0)
         errores += "Stockmax incorrecto o vacio\n";
+    if (this->stockMax < 0)
+        errores += "El StockMax no puede ser negativo\n";
     if (this->precio == 0)
         errores += "Precio incorrecto o vacio\n";
+    if (this->precio < 0)
+        errores += "El precio no puede ser negativo\n";
     return errores;
 }
 
@@ -123,6 +134,43 @@ void Producto::leerDesdeUnArchivoBinario(std::ifstream &archivo) {
     this->stockMin = registro.stockMin;
     this->stockMax = registro.stockMax;
     this->precio = registro.precio;
+}
+
+///
+void Producto::vender(int cantidadAVender) {
+    Producto::existencias -= cantidadAVender;
+}
+
+///
+void Producto::comprar(int cantidadAComprar) {
+    Producto::existencias += cantidadAComprar;
+}
+
+/**
+ * Se verigica que la compra no supere al stock maximo
+ * @return Una cadena vacia si no hay errores o una cadena con los mensajes de los errores.
+ */
+std::string Producto::validacionOperacionesDeCompra() {
+    std::string errores;
+    if (this->existencias > this->stockMax) {
+        errores += "La compra no puede superar el Stock Maximo\n";
+        errores += "Stock Maximo: " + std::to_string(this->stockMax) + "\n";
+    }
+    return errores;
+
+}
+
+/**
+ * Se verigica que las existencias no sean negativas
+ * @return Una cadena vacia si no hay errores o una cadena con los mensajes de los errores.
+ */
+std::string Producto::validacionOperacionesDeVenta() {
+    std::string errores;
+    if (this->existencias < 0) {
+        errores += "La venta no puede ser mayor a las existencias: \n";
+
+    }
+    return errores;
 }
 
 /**
