@@ -21,8 +21,10 @@ void WinListar::OnClickCancelarListado(wxCommandEvent &event) {
 }
 
 void WinListar::OnClickGenerarListado(wxCommandEvent &event) {
-    miDeposito->listarProductorAReponer();
-    miDeposito->listarExistencias();
+    if (m_checkBox_list_reposicion->IsChecked() == true)
+        miDeposito->listarProductorAReponer();
+    if (m_checkBox_list_existencias->IsChecked() == true)
+        miDeposito->listarExistencias();
     EndModal(1);
 }
 

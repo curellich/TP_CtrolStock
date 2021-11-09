@@ -8,7 +8,7 @@
  */
 #ifndef INC_000_TP_CTROLSTOCK_DEPOSITO_H
 #define INC_000_TP_CTROLSTOCK_DEPOSITO_H
-
+//esto es un comentario nuevo
 #include <vector>
 #include <string>
 #include "Producto.h"
