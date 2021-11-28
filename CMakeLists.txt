@@ -48,8 +48,8 @@ set(SOURCE_FILES
         WinListar.h
         wxfb_project.cpp
         wxfb_project.h
-        LogOperaciones.cpp
-        LogOperaciones.h
+        Operacion.cpp
+        Operacion.h
         )
 
 # wxWidgets include (this will do all the magic to configure everything)

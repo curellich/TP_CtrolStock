@@ -6,7 +6,7 @@
 #include "WinCompra.h"
 #include "Producto.h"
 #include "Deposito.h"
-#include "LogOperaciones.h"
+#include "Operacion.h"
 
 
 WinCompra::WinCompra(wxWindow *parent, Deposito *miDeposito, int indice) : WxOperaciones(parent),

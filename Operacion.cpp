@@ -2,7 +2,7 @@
 // Created by Jonathan Curellich on 08/11/2021.
 //
 
-#include "LogOperaciones.h"
+#include "Operacion.h"
 #include "Deposito.h"
 #include "Producto.h"
 #include <fstream>
