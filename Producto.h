@@ -87,7 +87,7 @@ public:
 
     void setPrecio(double precio);
 
-    //Operaciones con un producto (esto modifica sus existencias)
+    //Operacion con un producto (esto modifica sus existencias)
     ///@nota Vende un Producto existente
     void vender(int cantidadAVender);
 

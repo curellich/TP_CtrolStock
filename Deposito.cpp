@@ -9,6 +9,7 @@
 #include "Deposito.h"
 #include <fstream>
 #include <iomanip>
+#include <iostream>
 
 
 Deposito::Deposito(std::string nombreArchivo) {
@@ -44,6 +45,7 @@ bool Deposito::guardar() {
         archivo.close();
         return true;
     } else {
+        std::cout << "Hubo un error al abrir el archivo" << std::endl;
         return false;
     }
 }

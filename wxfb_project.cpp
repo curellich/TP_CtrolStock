@@ -87,7 +87,7 @@ WxfbPrincipal::WxfbPrincipal(wxWindow *parent, wxWindowID id, const wxString &ti
     m_btn_baja = new wxButton(this, wxID_ANY, wxT("Baja"), wxDefaultPosition, wxDefaultSize, 0);
     bSizer4->Add(m_btn_baja, 0, wxALL, 5);
 
-    m_staticText4 = new wxStaticText(this, wxID_ANY, wxT("Operaciones:"), wxDefaultPosition, wxDefaultSize, 0);
+    m_staticText4 = new wxStaticText(this, wxID_ANY, wxT("Operacion:"), wxDefaultPosition, wxDefaultSize, 0);
     m_staticText4->Wrap(-1);
     bSizer4->Add(m_staticText4, 0, wxALL | wxALIGN_CENTER_VERTICAL, 5);
 

@@ -42,8 +42,9 @@ void WinVenta::OnClickRealizarOperacion(wxCommandEvent &event) {
         wxMessageBox((errores), "Errores", wxICON_ERROR, this);//Muestro los errores
     } else {
         (*miDeposito)[indiceProducto] = producto;
-        Operaciones operacion(miDeposito, indiceProducto, 'v', cantidad);
-        operacion.guardarVenta();
+        Operacion operacion(miDeposito, indiceProducto, 'v', cantidad);
+        operacion.guardarVentaEnArchivoBinario();
+        operacion.guardarVentaEnArchivoTexto();
         miDeposito->guardar();//Actualizo el archivo
         EndModal(1);
     }

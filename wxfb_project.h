@@ -144,7 +144,7 @@ protected:
 
 public:
 
-    WxOperaciones(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Operaciones"),
+    WxOperaciones(wxWindow *parent, wxWindowID id = wxID_ANY, const wxString &title = wxT("Operacion"),
                   const wxPoint &pos = wxDefaultPosition, const wxSize &size = wxDefaultSize,
                   long style = wxDEFAULT_DIALOG_STYLE);
 
