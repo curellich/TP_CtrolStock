@@ -58,11 +58,11 @@ bool Listado::generarListadoProductosAReponer() {
                         << miDeposito->getListaProductos()[i].getCodigo()
                         << " Descripcion: " << std::setw(15) << miDeposito->getListaProductos()[i].getDescripcion()
                         << " Cantidad a reponer: "
-                        << std::setw(5) << (miDeposito->getListaProductos()[i].getStockMin() -
+                        << std::setw(5) << (miDeposito->getListaProductos()[i].getStockMax() -
                                             miDeposito->getListaProductos()[i].getExistencias())
                         << " Precio de reposicion: "
                         << std::setprecision(02) << std::setw(10)
-                        << (miDeposito->getListaProductos()[i].getStockMin() -
+                        << (miDeposito->getListaProductos()[i].getStockMax() -
                             miDeposito->getListaProductos()[i].getExistencias()) *
                            miDeposito->getListaProductos()[i].getPrecio()
                         << std::endl;
@@ -151,7 +151,7 @@ bool Listado::generarListadoVentas() {
     std::ofstream archivoVentas(nombreArchvioListadoVentas.c_str(), std::ios::out);
     if (archivoVentas.is_open()) {
         for (int i = 0; i < listaOperaciones.size(); ++i) {
-            if (listaOperaciones[i].tipoOperacion == 'c') {
+            if (listaOperaciones[i].tipoOperacion == 'v') {
                 archivoVentas << listaOperaciones[i].tipoOperacion << ","
                               << listaOperaciones[i].codigoProductoOperacion << ","
                               << listaOperaciones[i].descripcionProcutoOperacion << ","
