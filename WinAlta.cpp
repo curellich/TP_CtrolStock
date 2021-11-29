@@ -17,11 +17,18 @@ WinAlta::WinAlta(wxWindow *parent, Deposito *deposito) : WxfbProducto(parent), m
 WinAlta::~WinAlta() {
 
 }
-
+/**
+ * Funcion que al hacer click en "cancelar" retorna a la ventana principal sin dar de alta un producto
+ * @param event
+ */
 void WinAlta::OnClickCancelarProducto(wxCommandEvent &event) {
     EndModal(0);
 }
 
+/**
+ * Funion que al hacer click en "Alta" agrega un producto al archivo principal, y valida la existencia de errores.
+ * @param event
+ */
 void WinAlta::OnClickAltaoEditarProducto(wxCommandEvent &event) {
     int codigo, existencias, stockMin, stockMax;
     std::string descripcion;

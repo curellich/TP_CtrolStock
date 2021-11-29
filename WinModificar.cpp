@@ -28,10 +28,20 @@ WinModificar::WinModificar(wxWindow *parent, Deposito *deposito, int indice) : W
     SetTitle("Modificar Producto");
 }
 
+/**
+ * Funcion que al hacer click en "cancelar" cierra la ventana modal sin realizar cambios en el producto.
+ * @param event
+ */
 void WinModificar::OnClickCancelarProducto(wxCommandEvent &event) {
     EndModal(0);
 }
 
+/**
+ * Funcion que al hacer click en "modificar" verifica que los nuevos datos en los campos no tengan errores y actualiza
+ * los datos del producto en el archivo binario. Regresando a la ventana principal.
+ * Si existen errores no deja continuar hasta corregirlos o cancelar la modificacion.
+ * @param event
+ */
 void WinModificar::OnClickAltaoEditarProducto(wxCommandEvent &event) {
     //Convertimos las cadenas a numeros
     int codigo, existencias, stockMin, stockMax;

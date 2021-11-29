@@ -11,33 +11,10 @@ Operacion::Operacion(Deposito *miDeposito, int indiceProducto, char tipoOperacio
           cantidadOperada(cantidadOperada) {
 }
 
-bool Operacion::guardarCompraEnArchivoTexto() {
-    Producto &producto = (*miDeposito)[indiceProducto];
-    std::ofstream archivo("compras.txt", std::ios::app | std::ios::out);
-    if (archivo.is_open()) {
-        archivo << this->tipoOperacion << "," << producto.getCodigo() << "," << producto.getDescripcion()
-                << "," << this->cantidadOperada << std::endl;
-        archivo.close();
-        return true;
-    } else {
-        return false;
-    }
-}
-
-bool Operacion::guardarVentaEnArchivoTexto() {
-    Producto &producto = (*miDeposito)[indiceProducto];
-    std::ofstream archivo("ventas.txt", std::ios::app | std::ios::out);
-    if (archivo.is_open()) {
-        archivo << this->tipoOperacion << "," << producto.getCodigo() << "," << producto.getDescripcion()
-                << "," << this->cantidadOperada << std::endl;
-        archivo.close();
-        return true;
-    } else {
-        return false;
-    }
-}
-
-
+/**
+ * Funcion que se encarga de almacenar una compra en un archivo binario.
+ * @return
+ */
 bool Operacion::guardarCompraEnArchivoBinario() {
     std::ofstream archivo(this->nombreArchivo.c_str(), std::ios::binary | std::ios::app);
     if (archivo.is_open()) {
@@ -55,6 +32,10 @@ bool Operacion::guardarCompraEnArchivoBinario() {
     }
 }
 
+/**
+ * Funcion que se encarga de almacenar una venta en un archivo binario.
+ * @return
+ */
 bool Operacion::guardarVentaEnArchivoBinario() {
     std::ofstream archivo(this->nombreArchivo.c_str(), std::ios::binary | std::ios::app);
     if (archivo.is_open()) {
@@ -72,8 +53,4 @@ bool Operacion::guardarVentaEnArchivoBinario() {
     }
 }
 
-registro_operacion Operacion::leerDesdeUnArchivoBinario(std::ifstream &archivo) {
-    registro_operacion registro;
-    archivo.read((char *) &registro, sizeof(registro));
 
-}

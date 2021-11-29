@@ -24,11 +24,21 @@ WinVenta::WinVenta(wxWindow *parent, Deposito *miDeposito, int indice) : WxOpera
 WinVenta::~WinVenta() {
 
 }
-
+/**
+ * Funcion que al hacer click en "cancelar" cierra la ventana modal, sin restar cantidades a las existencias del
+ * producto seleccionado.
+ * @param event
+ */
 void WinVenta::OnClickCancelarOperacion(wxCommandEvent &event) {
     EndModal(0);
 }
 
+/**
+ * Funcion que al hacer click en "vender" resta la cantidad seleccionada de las existencias del produto y verifica que
+ * no se vendan mas unidades de las existentes. Si existe un error no deja continuar hasta ingresar una cantidad válida,
+ * o cancelar la venta.
+ * @param event
+ */
 void WinVenta::OnClickRealizarOperacion(wxCommandEvent &event) {
     int cantidad = wxAtoi(m_cantidad_operaciones->GetValue());
 

@@ -60,10 +60,11 @@ void WinPrincipal::OnClickBuscar(wxCommandEvent &event) {
     if (m_tabla->GetSelectedRows().GetCount() == 0) {
         filaSeleccionada = -1;
     }
-    int respuesta = miDeposito->buscarPorDescripcion((std::string) (m_busqueda->GetValue()), filaSeleccionada + 1);
+    int respuesta = miDeposito->buscarPorParteDeLaDescripcion((std::string) (m_busqueda->GetValue()),
+                                                              filaSeleccionada + 1);
     //Si no lo encontro buscar nuevamente desde el principio
     if (respuesta == NO_ENCONTRADO) {
-        respuesta = miDeposito->buscarPorDescripcion((std::string) m_busqueda->GetValue(), 0);
+        respuesta = miDeposito->buscarPorParteDeLaDescripcion((std::string) m_busqueda->GetValue(), 0);
     }
     if (respuesta == NO_ENCONTRADO) {
         wxMessageBox("No se encontró el producto");
@@ -148,6 +149,11 @@ void WinPrincipal::OnClickBaja(wxCommandEvent &event) {
     }
 }
 
+/**
+ * Cuando se hace click en "Compra", se abre la ventana modal para realizar la compra correspondiente al producto de
+ * la fila seleccionada en la grilla
+ * @param event
+ */
 void WinPrincipal::OnClickCompra(wxCommandEvent &event) {
     int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
     WinCompra nuevaVentana(this, miDeposito, filaSeleccionada);
@@ -156,6 +162,11 @@ void WinPrincipal::OnClickCompra(wxCommandEvent &event) {
     }
 }
 
+/**
+ * Cuando se hace click en "Venta", se abre la ventana modal para realizar la venta correspondiente al producto de
+ * la fila seleccionada en la grilla
+ * @param event
+ */
 void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
     int filaSeleccionada = m_tabla->GetGridCursorRow(); //Obtenemos el indice del Producto
     WinVenta nuevaVentana(this, miDeposito, filaSeleccionada);
@@ -164,6 +175,11 @@ void WinPrincipal::OnClickVenta(wxCommandEvent &event) {
     }
 }
 
+/**
+ * Cuando se hace click en "Listar" se abre la ventana modal que permite hacer diferentes listados con salidas mediante
+ * archivos.
+ * @param event
+ */
 void WinPrincipal::OnClickListados(wxCommandEvent &event) {
     WinListar nuevaVentana(this, miDeposito); //Creamos la ventana
     if (nuevaVentana.ShowModal()) { //mostrar y dejar en espera

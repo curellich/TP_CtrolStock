@@ -12,8 +12,10 @@ private:
     Deposito *miDeposito;
 
 protected:
+    ///Cierra la ventana sin generar nuevos listados (boton "Cancelar")
     void OnClickCancelarListado(wxCommandEvent &event) override;
 
+    ///Genera nuevos listados de acuerdo a los Checkbox marcardos (boton "Guardar")
     void OnClickGenerarListado(wxCommandEvent &event) override;
 
 public:

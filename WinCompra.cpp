@@ -25,11 +25,20 @@ WinCompra::WinCompra(wxWindow *parent, Deposito *miDeposito, int indice) : WxOpe
 WinCompra::~WinCompra() {
 
 }
-
+/**
+ * Funcion que al hacer click en "cancelar" regresa a la ventana principal sin alterar el archivo ni las existencias en
+ * los productos
+ * @param event
+ */
 void WinCompra::OnClickCancelarOperacion(wxCommandEvent &event) {
     EndModal(0);
 }
 
+/**
+ * Funcion que al hacer click en "comprar" suma la cantidad comprada a las existencias del producto seleccionado,
+ * valida la existencia de errores y regresa a la ventana principal
+ * @param event
+ */
 void WinCompra::OnClickRealizarOperacion(wxCommandEvent &event) {
     int cantidad = wxAtoi(m_cantidad_operaciones->GetValue());
 

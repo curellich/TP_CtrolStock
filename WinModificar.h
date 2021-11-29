@@ -2,10 +2,7 @@
 #define WINMODIFICAR_H
 
 #include "wxfb_project.h"
-
-//declaracion adelantada de la clase Deposito, para que me deje poner un puntero
-//sin tener que hacer el include "Deposito.h"
-class Deposito;
+#include "Deposito.h"
 
 /**
 * @nota Ventana para ver y/o modificar los datos de una Producto existente

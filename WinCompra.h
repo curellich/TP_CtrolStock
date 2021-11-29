@@ -14,8 +14,10 @@ private:
     int indiceProducto; //Aqui se almacena el indice del producto por si hay que modificarlo
 
 protected:
+    ///Cierra la ventana sin dar comprar mas productos (boton "Cancelar")
     void OnClickCancelarOperacion(wxCommandEvent &event) override;
 
+    ///Agrega nuevas cantidades a las existencias del producto seleccionado  y cierra la ventana (boton "Guardar")
     void OnClickRealizarOperacion(wxCommandEvent &event) override;
 
 public:

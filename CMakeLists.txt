@@ -54,9 +54,6 @@ set(SOURCE_FILES
         Listado.h
         )
 
-# wxWidgets include (this will do all the magic to configure everything)
-include( "${wxWidgets_USE_FILE}" )
-
 # If we build for windows systems, we also include the resource file
 # containing the manifest, icon and other resources
 if(WIN32)

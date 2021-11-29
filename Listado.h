@@ -5,8 +5,8 @@
 
 #include <string>
 #include "Operacion.h"
+#include "Deposito.h"
 
-class Deposito;
 
 class Listado {
 
@@ -22,14 +22,18 @@ private:
 
 public:
     Listado(Deposito *miDeposito);
+
     //Listados todos tendran por salida archivos.
     ///@nota Lista las existencias de cada producto en un archivo txt
     bool generarListadoExistencias();
+
     ///@nota Lista los productos a reponer (exitencias menores al stockMin) en un archivo txt
     bool generarListadoProductosAReponer();
+
     ///@nota Lista las compras realizadas en un archivo txt
     bool generarListadoCompras();
 
+    ///@nota Lista las ventas realizadas en un archivo txt
     bool generarListadoVentas();
 
 };

@@ -6,16 +6,25 @@
 #include "Operacion.h"
 #include <vector>
 
+//Nombre con los archivos necesarios para hacer las lecturas de las operaciones y obtener las salidas por archivos.
+
 std::string Listado::nombreArchvioListadoReposicion = "Listado de Productos a reponer.txt";
 std::string Listado::nombreArchvioListadoExistencias = "Listado Existencias.txt";
 std::string Listado::nombreArchvioListadoVentas = "Listado Ventas.txt";
 std::string Listado::nombreArchvioListadoCompras = "Listado Compras.txt";
 std::string Listado::nombreArchivoBinarioOperaciones = "Operaciones.dat";
 
-
+/**
+ * Constructor de la clase listado, emplea el patron Singleton para acceder a los productos del deposito.
+ * @param miDeposito
+ */
 Listado::Listado(Deposito *miDeposito) : miDeposito(miDeposito) {
 }
 
+/**
+ * Funcion que genera un archivo de texto listando todos los productos del deposito y sus existencias.
+ * @return
+ */
 bool Listado::generarListadoExistencias() {
 
     std::ofstream archivo(nombreArchvioListadoExistencias.c_str(), std::ios::out);
@@ -34,6 +43,11 @@ bool Listado::generarListadoExistencias() {
     }
 }
 
+/**
+ * Funcion que genera un archivo txt listando todos los produtos cuyas existencias estan por debajo del stock minimino,
+ * indicando la cantidad necearia para alcanzar el stock maximo y el precio total de reposicion.
+ * @return
+ */
 bool Listado::generarListadoProductosAReponer() {
     std::ofstream archivo(nombreArchvioListadoReposicion.c_str(), std::ios::out);
     if (archivo.is_open()) {
@@ -61,6 +75,10 @@ bool Listado::generarListadoProductosAReponer() {
     }
 }
 
+/**
+ * Funcion que genera un archivo txt listando operaciones de compra realizadas.
+ * @return
+ */
 bool Listado::generarListadoCompras() {
     registro_operacion registro;
     std::vector<registro_operacion> listaOperaciones;
@@ -101,7 +119,10 @@ bool Listado::generarListadoCompras() {
         std::cout << "Hubo un error al abrir el archivo" << std::endl;
     }
 }
-
+/**
+ * Funcion que genera un archivo txt listando operaciones de venta realizadas.
+ * @return
+ */
 bool Listado::generarListadoVentas() {
     registro_operacion registro;
     std::vector<registro_operacion> listaOperaciones;

@@ -8,7 +8,7 @@
  */
 #ifndef INC_000_TP_CTROLSTOCK_DEPOSITO_H
 #define INC_000_TP_CTROLSTOCK_DEPOSITO_H
-//esto es un comentario nuevo
+
 #include <vector>
 #include <string>
 #include "Producto.h"
@@ -64,33 +64,25 @@ public:
     ///@nota Devuelve un registro para ver o modificar
     Producto &operator[](int i);
 
-    ///@nota Devuelve un registro para ver o modificar
-    Producto &getProducto(int i);
-
     ///@nota Elimina un producto de la listaProductos
     void eliminarProducto(int i);
+
+    ///@validcion de deposito "evita productos duplicados, por codigo o descripcion de
+    std::string validacionDeDeposito(int codigo, std::string descripcion, int indice);
 
     //Extras
     ///@nota Ordena la listaProductos
     void ordenar(criterioOrdenamiento criterio);
 
+    //Busquedas bajo diferentes criterios
     ///@nota Busqueda por codigo para validacion
-    int buscarPorCodigoParaValidacionDuplicados(int codigo, int indice);
-
+    int buscarPorCodigo(int codigo, int indice);
 
     ///@nota Busqueda por descripcion para validacion
-    int buscarPorDescripcionParaValidacionDuplicados(std::string descripcion, int indice);
-
-    //funciones para realizar la busqueda de un producto por campo
-    ///@nota Buscar producto por codigo
-    int buscarPorCodigo(int codigo, int posicionDesde);
+    int buscarPorDescripcionCompleta(std::string descripcion, int indice);
 
     ///@nota Buscar producto por descripciones
-    int buscarPorDescripcion(std::string parte_de_la_descripcion, int posicioDesde);
-
-    ///@validcion de deposito "evita productos duplicados, por codigo o descripcion de
-    std::string validacionDeDeposito(int codigo, std::string descripcion, int indice);
-
+    int buscarPorParteDeLaDescripcion(std::string parte_de_la_descripcion, int posicioDesde);
 
 };
 

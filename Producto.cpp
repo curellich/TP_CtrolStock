@@ -41,7 +41,7 @@ double Producto::getPrecio() const {
 
 
 /**
- * Se verigica que ningun atributo este vacio, que los atributos de los valores enteros
+ * Se verifica que ningun atributo este vacio, que los atributos de los valores enteros
  * y double no sean negativos y se verifica que la descripcion no supere el tamanio del
  * registro_producto para poder almacenarlo en el archivo binario.
  * @return Una cadena vacia si no hay errores o una cadena con los mensajes de los errores.
@@ -113,12 +113,18 @@ void Producto::leerDesdeUnArchivoBinario(std::ifstream &archivo) {
     this->precio = registro.precio;
 }
 
-///
+/**
+ * Resta la cantidadAVender de las existencias del producto.
+ * @param cantidadAVender entero con la cantidad a vender
+ */
 void Producto::vender(int cantidadAVender) {
     Producto::existencias -= cantidadAVender;
 }
 
-///
+/**
+ * Suma la cantidadAComprar a las existencias del producto.
+ * @param cantidadAComprar entero con la cantidad a comprar
+ */
 void Producto::comprar(int cantidadAComprar) {
     Producto::existencias += cantidadAComprar;
 }
