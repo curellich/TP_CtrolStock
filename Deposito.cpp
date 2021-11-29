@@ -3,11 +3,10 @@
  * @nota Declaraciones de lo nececsario para la clase Deposito
  *
  */
-#include <fstream>
+
 #include <algorithm>
 #include "Utileria.h"
 #include "Deposito.h"
-#include <fstream>
 #include <iomanip>
 #include <iostream>
 
@@ -28,7 +27,9 @@ Deposito::Deposito(std::string nombreArchivo) {
             listaProductos[i].leerDesdeUnArchivoBinario(archivo);
         }
         archivo.close();
-    }
+    } else {
+        std::cout << "Hubo un error al intentar abrir el archivo" << std::endl;
+    };
 }
 
 int Deposito::cantidadProductos() {
@@ -149,43 +150,9 @@ std::string Deposito::validacionDeDeposito(int codigo, std::string descripcion, 
     return errores;
 }
 
-bool Deposito::listarExistencias() {
-    std::ofstream archivo("listadoDeProductos.txt", std::ios::out);
-    if (archivo.is_open()) {
-        for (int i = 0; i < this->cantidadProductos(); ++i) {
-            archivo << std::fixed << std::left << "- Codigo: " << std::setw(5) << listaProductos[i].getCodigo()
-                    << " Descripcion: " << std::setw(15) << listaProductos[i].getDescripcion()
-                    << " Existencias: " << std::setw(5) << listaProductos[i].getExistencias()
-                    << std::endl;
-        }
-        archivo.close();
-        return true;
-    } else {
-        return false;
-    }
-}
 
-bool Deposito::listarProductorAReponer() {
-    std::ofstream archivo("listaProductosAReponer.txt", std::ios::out);
-    if (archivo.is_open()) {
-        for (int i = 0; i < this->cantidadProductos(); ++i) {
-            if (listaProductos[i].getExistencias() < listaProductos[i].getStockMin()) {
-                archivo << std::fixed << std::left << "- Codigo: " << std::setw(5) << listaProductos[i].getCodigo()
-                        << " Descripcion: " << std::setw(15) << listaProductos[i].getDescripcion()
-                        << " Cantidad a reponer: "
-                        << std::setw(5) << (listaProductos[i].getStockMin() - listaProductos[i].getExistencias())
-                        << " Precio de reposicion: "
-                        << std::setprecision(02) << std::setw(10)
-                        << (listaProductos[i].getStockMin() - listaProductos[i].getExistencias()) *
-                           listaProductos[i].getPrecio()
-                        << std::endl;
-            }
-        }
-        archivo.close();
-        return true;
-    } else {
-        return false;
-    }
+const std::vector<Producto> &Deposito::getListaProductos() const {
+    return listaProductos;
 }
 
 

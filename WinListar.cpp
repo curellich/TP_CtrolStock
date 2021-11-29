@@ -6,6 +6,7 @@
 #include "WinListar.h"
 #include <wx/msgdlg.h>
 #include "Deposito.h"
+#include "Listado.h"
 
 
 WinListar::WinListar(wxWindow *parent, Deposito *miDeposito) : WxListados(parent), miDeposito(miDeposito) {
@@ -21,10 +22,15 @@ void WinListar::OnClickCancelarListado(wxCommandEvent &event) {
 }
 
 void WinListar::OnClickGenerarListado(wxCommandEvent &event) {
+    Listado listado(miDeposito);
     if (m_checkBox_list_reposicion->IsChecked() == true)
-        miDeposito->listarProductorAReponer();
+        listado.generarListadoProductosAReponer();
     if (m_checkBox_list_existencias->IsChecked() == true)
-        miDeposito->listarExistencias();
+        listado.generarListadoExistencias();
+    if (m_checkBox_list_compras->IsChecked() == true)
+        listado.generarListadoCompras();
+    if (m_checkBox_list_ventas->IsChecked() == true)
+        listado.generarListadoVentas();
     EndModal(1);
 }
 

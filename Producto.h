@@ -74,26 +74,12 @@ public:
 
     double getPrecio() const;
 
-    //setters
-    void setCodigo(int codigo);
-
-    void setDescripcion(const std::string &descripcion);
-
-    void setExistencias(int existencias);
-
-    void setStockMin(int stockMin);
-
-    void setStockMax(int stockMax);
-
-    void setPrecio(double precio);
-
     //Operacion con un producto (esto modifica sus existencias)
     ///@nota Vende un Producto existente
     void vender(int cantidadAVender);
 
     ///@nota Compra un Producto existente
     void comprar(int cantidadAComprar);
-
 
     ///Guarda un registro en un archivo Binario
     void guardarEnArchivoBinario(std::ofstream &archivo);

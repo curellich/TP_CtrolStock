@@ -177,29 +177,53 @@ Deposito.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Deposito.cpp.s
 .PHONY : Deposito.cpp.s
 
-LogOperaciones.o: LogOperaciones.cpp.o
-.PHONY : LogOperaciones.o
+Listado.o: Listado.cpp.o
+.PHONY : Listado.o
 
 # target to build an object file
-LogOperaciones.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/LogOperaciones.cpp.o
-.PHONY : LogOperaciones.cpp.o
+Listado.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Listado.cpp.o
+.PHONY : Listado.cpp.o
 
-LogOperaciones.i: LogOperaciones.cpp.i
-.PHONY : LogOperaciones.i
+Listado.i: Listado.cpp.i
+.PHONY : Listado.i
 
 # target to preprocess a source file
-LogOperaciones.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/LogOperaciones.cpp.i
-.PHONY : LogOperaciones.cpp.i
+Listado.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Listado.cpp.i
+.PHONY : Listado.cpp.i
 
-LogOperaciones.s: LogOperaciones.cpp.s
-.PHONY : LogOperaciones.s
+Listado.s: Listado.cpp.s
+.PHONY : Listado.s
 
 # target to generate assembly for a file
-LogOperaciones.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/LogOperaciones.cpp.s
-.PHONY : LogOperaciones.cpp.s
+Listado.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Listado.cpp.s
+.PHONY : Listado.cpp.s
+
+Operacion.o: Operacion.cpp.o
+.PHONY : Operacion.o
+
+# target to build an object file
+Operacion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Operacion.cpp.o
+.PHONY : Operacion.cpp.o
+
+Operacion.i: Operacion.cpp.i
+.PHONY : Operacion.i
+
+# target to preprocess a source file
+Operacion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Operacion.cpp.i
+.PHONY : Operacion.cpp.i
+
+Operacion.s: Operacion.cpp.s
+.PHONY : Operacion.s
+
+# target to generate assembly for a file
+Operacion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tp_CtrolStock.dir/build.make CMakeFiles/Tp_CtrolStock.dir/Operacion.cpp.s
+.PHONY : Operacion.cpp.s
 
 Producto.o: Producto.cpp.o
 .PHONY : Producto.o
@@ -432,9 +456,12 @@ help:
 	@echo "... Deposito.o"
 	@echo "... Deposito.i"
 	@echo "... Deposito.s"
-	@echo "... LogOperaciones.o"
-	@echo "... LogOperaciones.i"
-	@echo "... LogOperaciones.s"
+	@echo "... Listado.o"
+	@echo "... Listado.i"
+	@echo "... Listado.s"
+	@echo "... Operacion.o"
+	@echo "... Operacion.i"
+	@echo "... Operacion.s"
 	@echo "... Producto.o"
 	@echo "... Producto.i"
 	@echo "... Producto.s"

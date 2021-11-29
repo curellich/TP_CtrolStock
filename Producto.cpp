@@ -38,30 +38,7 @@ double Producto::getPrecio() const {
     return precio;
 }
 
-//setters
-void Producto::setCodigo(int codigo) {
-    Producto::codigo = codigo;
-}
 
-void Producto::setDescripcion(const std::string &descripcion) {
-    Producto::descripcion = descripcion;
-}
-
-void Producto::setExistencias(int existencias) {
-    Producto::existencias = existencias;
-}
-
-void Producto::setStockMin(int stockMin) {
-    Producto::stockMin = stockMin;
-}
-
-void Producto::setStockMax(int stockMax) {
-    Producto::stockMax = stockMax;
-}
-
-void Producto::setPrecio(double precio) {
-    Producto::precio = precio;
-}
 
 /**
  * Se verigica que ningun atributo este vacio, que los atributos de los valores enteros

@@ -1,14 +1,10 @@
-//
-// Created by Jonathan Curellich on 08/11/2021.
-//
-
 #include "Operacion.h"
 #include "Deposito.h"
 #include "Producto.h"
 #include <fstream>
 #include <iostream>
 
-std::string Operacion::nombreArchivo = "Operacion.dat";
+std::string Operacion::nombreArchivo = "Operaciones.dat";
 
 Operacion::Operacion(Deposito *miDeposito, int indiceProducto, char tipoOperacion, int cantidadOperada)
         : miDeposito(miDeposito), indiceProducto(indiceProducto), tipoOperacion(tipoOperacion),
@@ -43,7 +39,7 @@ bool Operacion::guardarVentaEnArchivoTexto() {
 
 
 bool Operacion::guardarCompraEnArchivoBinario() {
-    std::ofstream archivo(this->nombreArchivo.c_str(), std::ios::binary | std::ios::trunc);
+    std::ofstream archivo(this->nombreArchivo.c_str(), std::ios::binary | std::ios::app);
     if (archivo.is_open()) {
         Producto &producto = (*miDeposito)[indiceProducto];
         registro_operacion registro;
@@ -60,7 +56,7 @@ bool Operacion::guardarCompraEnArchivoBinario() {
 }
 
 bool Operacion::guardarVentaEnArchivoBinario() {
-    std::ofstream archivo(this->nombreArchivo.c_str(), std::ios::binary | std::ios::trunc);
+    std::ofstream archivo(this->nombreArchivo.c_str(), std::ios::binary | std::ios::app);
     if (archivo.is_open()) {
         Producto &producto = (*miDeposito)[indiceProducto];
         registro_operacion registro;
@@ -74,4 +70,10 @@ bool Operacion::guardarVentaEnArchivoBinario() {
         std::cout << "Hubo un error al abrir el archivo" << std::endl;
         return false;
     }
+}
+
+registro_operacion Operacion::leerDesdeUnArchivoBinario(std::ifstream &archivo) {
+    registro_operacion registro;
+    archivo.read((char *) &registro, sizeof(registro));
+
 }

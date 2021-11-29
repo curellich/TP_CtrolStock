@@ -42,6 +42,11 @@ private:
 
     ///@nota Estructura lineal "vector" para contener los productos de
     std::vector<Producto> listaProductos;
+
+public:
+    ///@nota Getter de la lista de productos, me devuelve el vector del deposito.
+    const std::vector<Producto> &getListaProductos() const;
+
 public:
     ///@nota Constructor de la clase deposito, emplea un archivo para cargar los datos en memoria
     Deposito(std::string nombreArchivo);
@@ -65,14 +70,6 @@ public:
     ///@nota Elimina un producto de la listaProductos
     void eliminarProducto(int i);
 
-    //Listados todos tendran por salida archivos.
-    ///@nota Lista las existencias de cada producto en un archivo
-    bool listarExistencias();
-
-    ///@nota Lista los productos a reponer (exitencias menores al stockMin) en un archivo
-    bool listarProductorAReponer();
-
-
     //Extras
     ///@nota Ordena la listaProductos
     void ordenar(criterioOrdenamiento criterio);
@@ -93,6 +90,8 @@ public:
 
     ///@validcion de deposito "evita productos duplicados, por codigo o descripcion de
     std::string validacionDeDeposito(int codigo, std::string descripcion, int indice);
+
+
 };
 
 

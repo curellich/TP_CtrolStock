@@ -50,6 +50,8 @@ set(SOURCE_FILES
         wxfb_project.h
         Operacion.cpp
         Operacion.h
+        Listado.cpp
+        Listado.h
         )
 
 # wxWidgets include (this will do all the magic to configure everything)

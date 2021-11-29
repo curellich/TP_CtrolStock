@@ -18,15 +18,17 @@ private:
     ///@nota Nombre del archivo binario donde se reqistran todas las operaciones
     static std::string nombreArchivo;
 
-
     Deposito *miDeposito;
     int indiceProducto; //Aqui se almacena el indice del producto para saber que producto se opera
     //Atributos de una operacion
+    int codigoOperacion;
+    std::string descripcionProdutoOperacion;
     char tipoOperacion;
     int cantidadOperada;
 public:
     Operacion(Deposito *miDeposito, int indiceProducto, char tipoOperacion, int cantidadOperada);
     bool guardarCompraEnArchivoBinario();
+    registro_operacion leerDesdeUnArchivoBinario(std::ifstream &archivo);
     bool guardarVentaEnArchivoBinario();
     bool guardarCompraEnArchivoTexto();
     bool guardarVentaEnArchivoTexto();

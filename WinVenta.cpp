@@ -44,7 +44,7 @@ void WinVenta::OnClickRealizarOperacion(wxCommandEvent &event) {
         (*miDeposito)[indiceProducto] = producto;
         Operacion operacion(miDeposito, indiceProducto, 'v', cantidad);
         operacion.guardarVentaEnArchivoBinario();
-        operacion.guardarVentaEnArchivoTexto();
+//        operacion.guardarVentaEnArchivoTexto();
         miDeposito->guardar();//Actualizo el archivo
         EndModal(1);
     }
